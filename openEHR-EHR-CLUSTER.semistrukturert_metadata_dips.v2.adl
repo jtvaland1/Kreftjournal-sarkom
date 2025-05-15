@@ -1,0 +1,197 @@
+archetype (adl_version=1.4; uid=ff9123f4-070a-363a-a5c0-01dacbd4c22c)
+	openEHR-EHR-CLUSTER.semistrukturert_metadata_dips.v2
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["name"] = <"">
+	>
+	lifecycle_state = <"0">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Brukes for å kunne definere semistrukturerte elementer.">
+			use = <"Brukes for å kunne definere semistrukturerte elementer. Graden av granulering er opp til behovet. Kodeverket kan brukes i mange DIPS løsninger og kodeverket vil da være svært variert utfra behov.">
+			misuse = <"skal ikke brukes til noe annet enn beskrevet over og bør ikke brukes uten avtale med DIPS.">
+		>
+	>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"a6d9c7e2f9fdccb7ae829e911354adb1">
+		["build_uid"] = <"6db52731-16b8-343c-9191-b3d5030819bd">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Semistrukturert metadata dips
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {    -- Klassifisering av informasjon
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Familie_og_sosialt
+							at0003,    -- Tidligere_sykdommer
+							at0004,    -- Naturlige_funksjoner
+							at0005,    -- Legemiddler_i_bruk_ved_innleggelse
+							at0006,    -- Allergier
+							at0007,    -- Stimulantia
+							at0008,    -- Status_present
+							at0009,    -- Supplerende_undersøkelser
+							at0010,    -- Vurdering
+							at0011,    -- Videre plan/tiltak/behandling
+							at0012,    -- Aktuelt
+							at0013,    -- Historiske_data
+							at0014,    -- Videre plan
+							at0015,    -- Videre tiltak
+							at0016,    -- Videre behandling
+							at0017,    -- 1.Kommunikasjon/sanser
+							at0018,    -- 2.Kunnskap/utvikling/psykisk
+							at0019,    -- 3.Åndedrett/sirkulasjon
+							at0020,    -- 4.Ernæring/væske/elektrolyttbalanse
+							at0021,    -- 5.Eliminasjon
+							at0022,    -- 6.Hud/vev/sår
+							at0023,    -- 7.Aktivitet/funksjons-status
+							at0024,    -- 8.Smerte/søvn/hvile/velvære
+							at0025,    -- 9.Seksualitet/reproduksjon
+							at0026,    -- 10.Sosialt/planlegging av utskrivelse
+							at0027,    -- 11.Åndelig/kulturelt/livsstil
+							at0028,    -- 12.Annet/legedelegerte aktiviteter og observasjoner
+							at0029]    -- Sammendrag
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Semistrukturert metadata dips">
+					description = <"Semistrukturert metadata dips">
+				>
+				["at0001"] = <
+					text = <"Klassifisering av informasjon">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Familie_og_sosialt">
+					description = <"En fritekst som beskriver famile og sosialt.">
+				>
+				["at0003"] = <
+					text = <"Tidligere_sykdommer">
+					description = <"En fritekst som beskriver tidligere sykdommer.">
+				>
+				["at0004"] = <
+					text = <"Naturlige_funksjoner">
+					description = <"En fritekst som beskriver naturlige funksjoner.">
+				>
+				["at0005"] = <
+					text = <"Legemiddler_i_bruk_ved_innleggelse">
+					description = <"En fritekst som beskriver legemiddler i bruk ved innleggelse">
+				>
+				["at0006"] = <
+					text = <"Allergier">
+					description = <"En fritekst som beskriver legemiddler allergier.">
+				>
+				["at0007"] = <
+					text = <"Stimulantia">
+					description = <"En fritekst som beskriver legemiddler stimulantia.">
+				>
+				["at0008"] = <
+					text = <"Status_present">
+					description = <"En fritekst som beskriver status present.">
+				>
+				["at0009"] = <
+					text = <"Supplerende_undersøkelser">
+					description = <"En fritekst som beskriver supplerende undersøkelser.">
+				>
+				["at0010"] = <
+					text = <"Vurdering">
+					description = <"En fritekst som beskriver vurdering.">
+				>
+				["at0011"] = <
+					text = <"Videre plan/tiltak/behandling">
+					description = <"En fritekst som beskriver tiltak og/eller plan/behandling">
+				>
+				["at0012"] = <
+					text = <"Aktuelt">
+					description = <"En fritekst som beskriver aktuelt.">
+				>
+				["at0013"] = <
+					text = <"Historiske_data">
+					description = <"En fritekst som en samling av data ofte automatisk gjenbrukt som samles i en fritekstbolk">
+				>
+				["at0014"] = <
+					text = <"Videre plan">
+					description = <"En fritekst som beskriver plan">
+				>
+				["at0015"] = <
+					text = <"Videre tiltak">
+					description = <"En fritekst som beskriver tiltak">
+				>
+				["at0016"] = <
+					text = <"Videre behandling">
+					description = <"En fritekst som beskriver behandling">
+				>
+				["at0017"] = <
+					text = <"1.Kommunikasjon/sanser">
+					description = <"En fritekst som beskriver kapittel for Kommunikasjon/sanser som definert omsorgsområde">
+				>
+				["at0018"] = <
+					text = <"2.Kunnskap/utvikling/psykisk">
+					description = <"En fritekst som beskriver kapittel for Kunnskap/utvikling/psykisk som definert omsorgsområde">
+				>
+				["at0019"] = <
+					text = <"3.Åndedrett/sirkulasjon">
+					description = <"En fritekst som beskriver kapittel for Åndedrett/sirkulasjon som definert omsorgsområde">
+				>
+				["at0020"] = <
+					text = <"4.Ernæring/væske/elektrolyttbalanse">
+					description = <"En fritekst som beskriver kapittel for Ernæring/væske/elektrolyttbalanse som definert omsorgsområde">
+				>
+				["at0021"] = <
+					text = <"5.Eliminasjon">
+					description = <"En fritekst som beskriver kapittel for Eliminasjon som definert omsorgsområde">
+				>
+				["at0022"] = <
+					text = <"6.Hud/vev/sår">
+					description = <"En fritekst som beskriver kapittel for Hud/vev/sår som definert omsorgsområde">
+				>
+				["at0023"] = <
+					text = <"7.Aktivitet/funksjons-status">
+					description = <"En fritekst som beskriver kapittel for Aktivitet/funksjons-status som definert omsorgsområde">
+				>
+				["at0024"] = <
+					text = <"8.Smerte/søvn/hvile/velvære">
+					description = <"En fritekst som beskriver kapittel for Smerte/søvn/hvile/velvære som definert omsorgsområde">
+				>
+				["at0025"] = <
+					text = <"9.Seksualitet/reproduksjon">
+					description = <"En fritekst som beskriver kapittel for Seksualitet/reproduksjon som definert omsorgsområde">
+				>
+				["at0026"] = <
+					text = <"10.Sosialt/planlegging av utskrivelse">
+					description = <"En fritekst som beskriver kapittel for Sosialt/planlegging av utskrivelse som definert omsorgsområde">
+				>
+				["at0027"] = <
+					text = <"11.Åndelig/kulturelt/livsstil">
+					description = <"En fritekst som beskriver kapittel for Åndelig/kulturelt/livsstil som definert omsorgsområde">
+				>
+				["at0028"] = <
+					text = <"12.Annet/legedelegerte aktiviteter og observasjoner">
+					description = <"En fritekst som beskriver kapittel for Annet/legedelegerte aktiviteter og observasjoner som definert omsorgsområde">
+				>
+				["at0029"] = <
+					text = <"Sammendrag">
+					description = <"Et fritekst sammendrag både skrevet av bruker/autogenerert">
+				>
+			>
+		>
+	>
