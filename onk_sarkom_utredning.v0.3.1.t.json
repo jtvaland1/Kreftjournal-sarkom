@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "71.0.0",
+      "sem_ver" : "72.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "49f7645609c09a9e2f45c21ba1e7afc3",
+      "MD5-CAM-1.0.1" : "2714d18305c4d6676ea156197c8170d7",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -22716,13 +22716,6 @@
             "code" : "ac0.83",
             "description" : ""
           },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusion",
-            "description" : "Brief description, summary or interpretation of the investigation outcome.",
-            "comment" : "For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype."
-          },
           "at0047" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0047",
@@ -22770,13 +22763,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.83",
             "description" : ""
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Schlussfolgerung",
-            "description" : "Kurze Beschreibung, Zusammenfassung oder Interpretation der Untersuchungsergebnisse.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
           },
           "at0047" : {
             "@type" : "ARCHETYPE_TERM",
@@ -22852,19 +22838,6 @@
             "code" : "ac0.83",
             "description" : ""
           },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Konklusjon",
-            "description" : "Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.",
-            "comment" : "For eksempel \"Alle resultater innenfor normalverdier\", \"Normal\", \"Ytterligere undersøkelser nødvendig\". Dette dataelementet er ikke tenkt å representere det faktiske resultatet eller funnet til et laboratorieresultat. Er det nødvendig kan en passende CLUSTER-arketype benyttes i  SLOT'et \"Ytterligere detaljer\", for eksempel CLUSTER.laboratory_test_analyte arketypen (Analyseresultat)."
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Uspesifikk hendelse",
-            "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
-          },
           "at0047" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0047",
@@ -22899,13 +22872,6 @@
             "code" : "ac0.83",
             "description" : ""
           },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusion",
-            "description" : "Breve descripción, resumen o interpretación del resultado de la investigación.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
-          },
           "at0047" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0047",
@@ -22933,13 +22899,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.83",
             "description" : ""
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusió",
-            "description" : "Breu descripció, resum o interpretació del resultat de la investigació.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
           },
           "at0047" : {
             "@type" : "ARCHETYPE_TERM",
@@ -24786,15 +24745,6 @@
           "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0013.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-004.v1",
-          "referenceType" : "archetypeOverlay"
-        }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0015.1",
@@ -24969,6 +24919,15 @@
           "nodeId" : "at0045.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..1",
+          "nodeId" : "at0013.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-004.v1",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -26650,15 +26609,6 @@
                       } ],
                       "attributeTuples" : [ ]
                     }, {
-                      "@type" : "C_ARCHETYPE_ROOT",
-                      "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0065.2",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ],
-                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-specimen-002.v1",
-                      "referenceType" : "archetypeOverlay"
-                    }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
@@ -26739,15 +26689,6 @@
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
-                      "@type" : "C_ARCHETYPE_ROOT",
-                      "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0097.4",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ],
-                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-001.v1",
-                      "referenceType" : "archetypeOverlay"
-                    }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
@@ -26775,6 +26716,24 @@
                       "nodeId" : "at0101.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0065.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-specimen-002.v1",
+                      "referenceType" : "archetypeOverlay"
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0097.4",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-001.v1",
+                      "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -28567,15 +28526,6 @@
           "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..0",
-          "nodeId" : "at0013.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-006.v1",
-          "referenceType" : "archetypeOverlay"
-        }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0015.1",
@@ -28750,6 +28700,15 @@
           "nodeId" : "at0045.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..0",
+          "nodeId" : "at0013.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-006.v1",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -29369,39 +29328,12 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0024.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "NLK"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "NLK" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "NLK",
-                    "code" : "NPU19766",
-                    "value" : "P-Alfa-føtoprotein (AFP)"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -29409,45 +29341,9 @@
             "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
+              "rmTypeName" : "DV_TEXT",
               "occurrences" : "1..1",
               "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "260385009",
-                    "value" : "Negativt"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "10828004",
-                    "value" : "Positivt"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "419984006",
-                    "value" : "Inkonklusiv"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "385660001",
-                    "value" : "Ikke utført"
-                  } ]
-                } ]
-              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -30459,15 +30355,6 @@
                       } ],
                       "attributeTuples" : [ ]
                     }, {
-                      "@type" : "C_ARCHETYPE_ROOT",
-                      "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0065.2",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ],
-                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-specimen-003.v1",
-                      "referenceType" : "archetypeOverlay"
-                    }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
@@ -30548,15 +30435,6 @@
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
-                      "@type" : "C_ARCHETYPE_ROOT",
-                      "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0097.4",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ],
-                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-002.v1",
-                      "referenceType" : "archetypeOverlay"
-                    }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
@@ -30573,17 +30451,28 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0101.2",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0101.1",
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0065.2",
                       "attributes" : [ ],
-                      "attributeTuples" : [ ]
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-specimen-003.v1",
+                      "referenceType" : "archetypeOverlay"
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0097.4",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-002.v1",
+                      "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -30796,12 +30685,6 @@
             "description" : "Fritekstbeskrivelse av de viktigste funnene.",
             "comment" : "For eksempel \"mønsteret indikerer betydelig nedsatt nyrefunksjon\". Innholdet av konklusjonen vil variere, basert på hvilken undersøkelse som er utført. Konklusjonen bør være i overensstemmelse med kodene brukt i elementet \"Diagnose\"."
           },
-          "at0101.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0101.1",
-            "text" : "Kommentar morfologi",
-            "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt."
-          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
@@ -30820,6 +30703,12 @@
             "code" : "at0094",
             "text" : "Rekvisisjonsdetaljer",
             "description" : "Detaljer knyttet til rekvisisjonen."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101.2",
+            "text" : "Merknad",
+            "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt."
           }
         },
         "zh-cn" : {
