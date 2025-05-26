@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2805a49bf0fdfa1f033dddff91994ab8">
+		["MD5-CAM-1.0.1"] = <"286d23ff8bb1fe84dd2e899433922217">
 		["build_uid"] = <"fa3fd3ae-e110-3be2-943a-544095567374">
 	>
 
 definition
-	SECTION[at0000] matches {    -- problem_oncology_no
+	SECTION[at0000] matches {    -- problem_oncology_no_gammel
 		items cardinality matches {1..*; unordered} matches {
 			allow_archetype ENTRY[at0021] occurrences matches {0..*} matches {    -- Overordnet diagnostisk informasjon
 				include
@@ -50,7 +50,7 @@ ontology
 		["nb"] = <
 			items = <
 				["at0000"] = <
-					text = <"problem_oncology_no">
+					text = <"problem_oncology_no_gammel">
 					description = <"Kreftdiagnose">
 				>
 				["at0007"] = <
