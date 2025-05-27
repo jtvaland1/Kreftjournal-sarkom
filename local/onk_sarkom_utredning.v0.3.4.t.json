@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "72.1.0",
+      "sem_ver" : "73.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "5411dd5b51cc33efd7c151ab24fecaa8",
+      "MD5-CAM-1.0.1" : "8ade53c5590a5b77b5d852cd4dc98107",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -30248,10 +30248,6 @@
                               "constraint" : [ ],
                               "selectedTerminologies" : [ "SNOMED-CT" ],
                               "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "15220000",
-                                "value" : "Laboratorietest"
-                              }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "9336009",
                                 "value" : "Kjemisk analyse (kvalitativ og kvantativ)"
