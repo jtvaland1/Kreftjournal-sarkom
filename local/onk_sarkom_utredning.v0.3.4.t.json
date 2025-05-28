@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "74.0.0",
+      "sem_ver" : "75.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "dac41248bdb3bd3fb92a455de65d81fe",
+      "MD5-CAM-1.0.1" : "eafbae20435d4942b1cf418f0b293d34",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -32156,18 +32156,6 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
-              "defaultValue" : {
-                "defining_code" : {
-                  "terminology_id" : {
-                    "value" : "SNOMED-CT",
-                    "@type" : "TERMINOLOGY_ID"
-                  },
-                  "code_string" : "399374009",
-                  "@type" : "CODE_PHRASE"
-                },
-                "value" : "Reginoale lymfeknutemetastase",
-                "@type" : "DV_CODED_TEXT"
-              },
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
@@ -34813,7 +34801,25 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0003.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DATE_TIME",
+                      "rmTypeName" : "DATE_TIME",
+                      "patternedConstraint" : "yyyy-mm-ddTXX:XX:XX",
+                      "constraint" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -36851,7 +36857,25 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0003.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DATE_TIME",
+                      "rmTypeName" : "DATE_TIME",
+                      "patternedConstraint" : "yyyy-mm-ddTXX:XX:XX",
+                      "constraint" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
