@@ -1,0 +1,313 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "253368cc-b010-4cb2-8230-dec6a06572b5",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2025-06-02"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "db4e1fce50524148412f97068609317a",
+      "PARENT:MD5-CAM-1.0.1" : "9CA673C44D07EB44E7473631D0F97DD4"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sv" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sv"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-CLUSTER.clinicalevidence (4).v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "CLUSTER",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "items",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0003.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
+                "occurrences" : "0..1",
+                "terminologyId" : {
+                  "value" : "SNOMED-CT"
+                },
+                "constraint" : [ ],
+                "selectedTerminologies" : [ "SNOMED-CT" ],
+                "includedExternalTerminologyCodes" : [ {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "396236002",
+                  "value" : "Depth of direct invasion by neoplasm (observable entity)"
+                } ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0004.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0005.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
+                "occurrences" : "0..1",
+                "terminologyId" : {
+                  "value" : "SNOMED-CT"
+                },
+                "constraint" : [ ],
+                "selectedTerminologies" : [ "SNOMED-CT" ],
+                "includedExternalTerminologyCodes" : [ {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "409782005",
+                  "value" : "Hud"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "405903000",
+                  "value" : "Subcutis"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "427626002",
+                  "value" : "Overfladisk fascia"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "409772009",
+                  "value" : "Muskulatur"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "568041000202100",
+                  "value" : "Intermuskulært"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "409773004",
+                  "value" : "Innvekst i ben"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "261665006",
+                  "value" : "Ukjent"
+                } ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0006.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0026.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0022.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0001.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0023.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Clinical evidence (4)",
+          "description" : "Details about findings that support a clinical assertion."
+        }
+      },
+      "nb" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Klinisk grunnlag - dybde",
+          "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+        }
+      },
+      "de" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Klinische Evidenz (4)",
+          "description" : "Details über Befunde, die eine klinische Feststellung stützen."
+        }
+      },
+      "sv" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Kliniska bevis (4)",
+          "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "9f618897-5a63-3a3f-a664-62706e73d00c",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "Clinical evidence - dybde",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sv"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
