@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "78.0.0",
+      "sem_ver" : "79.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e9bff86c029692539b79d7e9ad884434",
+      "MD5-CAM-1.0.1" : "290c1abef2de8be165e14c4b29d9522c",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -36005,258 +36005,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "a173aacd-405d-49b9-b7cf-ea79085cce4e",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "2229506a6b14c89e891bda8049067561"
-      },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere FIGO stadium for gynekologisk kreft.",
-          "keywords" : [ "figo, vulva, vagina, livmorhals, eggstokk, livmor, gynekologi, klassifisering, stadium, kreft, neoplasi, onkologi" ],
-          "use" : "Brukes for å registrere FIGO stadium for gynekologisk kreft.\n\nArketypen er laget for å benyttes i en ENTRY arketype som vil gi den kliniske eller patologiske konteksten for FIGO registreringen. For eksempel: I SLOTet \"Spesifikke detaljer\" i arketypen EVALUATION.problem_diagnose (Problem/diagnose), i en relevant patologirelatert CLUSTER-arketype som igjen nøstes i laboratoriesvar-arketypen (OBSERVATION.laboratory_test_result), i arketypen OBSERVATION.imaging_exam_result (Bildediagnostisk svar) eller innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk passende.\n\nHver kreftform har et sett av unike FIGO klassifikasjonsverdier. Det antas at denne arketypen blir tilpasset for å ivareta de unike kravene til hver tumortype i henhold til aktuell utgave av FIGO-klassifikasjonen. Dette vil gjøres enten ved å bruke en spesialisering av arketypen eller i et templat.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the FIGO stage for gynecological cancer.",
-          "keywords" : [ "figo, vulva, vagina, cervix, ovary, uterus, gynecology, classification, stage, staging, cancer, neoplasia, oncology" ],
-          "use" : "Use to record the FIGO stage for gynecological cancer.\n\nThis archetype has been designed to be nested inside an ENTRY or appropriate CLUSTER archetype which will provide a clinical or pathological context for the FIGO stage - for example: the 'Specific details' SLOT within the EVALUATION.problem_diagnosis archetype; an appropriate histopathology-related CLUSTER archetype within the OBSERVATION.laboratory_test_result archetype context; within the OBSERVATION.imaging_exam_result archetype; or within other ENTRY or CLUSTER archetypes, where clinically appropriate.\n\nEach cancer has a set of unique FIGO staging values. It is expected that this archetype will be further constrained to reflect the unique requirements for each tumour and version of the FIGO staging system, using either an archetype specialisation or a template.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.figo_staging_cancer.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-figo_staging_cancer-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "local"
-                  },
-                  "constraint" : [ "at0007", "at0008", "at0009", "at0010", "at0011", "at0012", "at0013" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "no.onk.figo"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "no.onk.figo" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "no.onk.figo",
-                    "code" : "1",
-                    "value" : "Stadium I"
-                  }, {
-                    "terminologyId" : "no.onk.figo",
-                    "code" : "2",
-                    "value" : "Stadium II"
-                  }, {
-                    "terminologyId" : "no.onk.figo",
-                    "code" : "3",
-                    "value" : "Stadium III"
-                  }, {
-                    "terminologyId" : "no.onk.figo",
-                    "code" : "4",
-                    "value" : "Stadium IV"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0003.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "FIGO stage",
-            "description" : "The FIGO stage selected from the specified 'Staging criteria.",
-            "comment" : "For example: IIA or IVB."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Molecular subtype",
-            "description" : "FIGO molecular subtype classification that can added to the 'Stage', where relevant.",
-            "comment" : "For example: p53abn or POLEmut"
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tumor site/organ",
-            "description" : "Identification of the organ- or tissue-specific FIGO criteria used for staging."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "FIGO staging with molecular classification",
-            "description" : "Concatenation of FIGO stage and molecular subtype with 'm' as delimiter.",
-            "comment" : "For example: IIImPOLEmut or IVmPOLEmut."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "FIGO staging of gynaecological cancer",
-            "description" : "The staging of gynaecological cancer using the FIGO staging system.",
-            "comment" : "FIGO - The International Federation of Gynecology and Obstetrics.\n"
-          }
-        },
-        "nb" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "FIGO stadium",
-            "description" : "Vurdering av størrelse og utbredelse av tumor, involvering av nærliggende lymfeknuter, og tilstedeværelse eller fravær av fjernmetastaser."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Molekylær subtype",
-            "description" : "Tilstedeværelse av molekylære egenskaper som påvirker FIGO stadiet.",
-            "comment" : "For eksempel: POLEmut, MMRd, NSMP, and p53abn."
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tumorlokasjon/organ",
-            "description" : "Tumorlokasjon eller organet som klassifiseres etter FIGO-stadieinndeling.",
-            "comment" : "For eksempel: cervix uteri (cervikalkreft), corpus uteri (endometriekreft), eggstokk, eggleder og peritoneum, vulva, vagina eller morkake (trofoblastsykdom/morkakekreft)."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "5b2888fd-ac10-3e84-964a-fe50bfe0fc2e",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "daa69544-57e0-48e7-8611-0a81c4afeb5f",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -36356,6 +36104,18 @@
             "text" : "Problem/diagnose detaljer",
             "description" : "Brukes for å registrere detaljer til problem/diagnose blant annet ICD koder.",
             "comment" : "Benyttes for å sette ICD10 koder for problemer hvor det er mer aktuelt å bruke overordnet kode på problem/diagnosenavn. "
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Merknad",
+            "description" : "Narrativ beskrivelse av problem/diagnose."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "ICD-10",
+            "description" : "Navnet på problem/diagnose"
           }
         }
       },
@@ -38708,11 +38468,11 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
-              "nodeId" : "at0043.5",
+              "occurrences" : "0..1",
+              "nodeId" : "at0043.2",
               "attributes" : [ ],
               "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-figo_staging_cancer-001.v0",
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-figo_staging_cancer-003.v1",
               "referenceType" : "archetypeOverlay"
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
@@ -39204,7 +38964,40 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "C8A32097ABA98AD86A3DF986882BC9D7"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere resultatene for hvert parameter og risikokategorien for GIST basert på de modifiserte NIH-kriteriene.",
+          "keywords" : [ "gastrointestinal stromal tumor, GIST, sarkom, kreft, neoplasme, onkologi, malignitet, risiko, risikovurdering, risikostratifisering, klassifikasjon, kategorisering" ],
+          "use" : "Brukes for å registrere resultatene for hvert parameter og risikokategorien for GIST basert på de modifiserte NIH-kriteriene.\r\n\r\nArketypen er utviklet for å brukes i en ENTRY-arketype som vil gi den kliniske eller patologiske konteksten for registreringen. For eksempel: I SLOTet \"Spesifikke detaljer\" i arketypen Problem/diagnose (EVALUATION.problem_diagnosis), i en relevant patologirelatert CLUSTER-arketype som igjen nøstes i arketypen Laboratorieresultat (OBSERVATION.laboratory_test_result). Dette gir også mulighet for å registrere kroppssted.\r\n\r\nNår denne arketypen må inkluderes i en ikke-OBSERVATION-arketype, som for eksempel Problem/diagnose-arketypen (EVALUATION.problem_diagnosis), bør den først nøstes i Klinisk grunnlag-arketypen (CLUSTER.clinical_evidence) for å gi viktig kontekst, slik som vurderingsdato.",
+          "misuse" : "Skal ikke brukes for primærregistrering av diameter og mitosetall av tumor - bruk en relevant patologirelatert ENTRY-arketype for dette.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results for each of the component parameters and the risk category for GIST based on the Modified NIH Criteria.",
+          "keywords" : [ "gastrointestinal stromal tumour, tumor, GIST, sarcoma, cancer, neoplasm, oncology, malignancy, risk, risk assessment, risk stratification, classification, categorisation" ],
+          "use" : "Use to record the results for each of the component parameters and the risk category for GIST based on the Modified NIH Criteria. \r\n\r\nThe archetype is designed to be used in an ENTRY archetype that will provide the clinical or pathological context. For example: In the \"Specific Details\" SLOT in the EVALUATION.problem_diagnosis archetype, or nested in a relevant pathology-related CLUSTER archetype that is again nested in the OBSERVATION.laboratory_test_result archetype. This will also allow for documentation of body site.\r\n\r\nWhen this archetype needs to be included within an non-OBSERVATION archetype such as EVALUATION.problem_diagnosis, it should first be nested within the CLUSTER.clinical_evidence to provide important context such as the date of the assessment.",
+          "misuse" : "Not to be used for the primary recording of diameter and mitotic count of the tumour - use a relevant pathology-related archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.gist_modified_nih.v1",
     "differential" : true,
@@ -39532,13 +39325,191 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "47AB381BAFD9CB65BAE38B0E556B6C31"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere stadium av gynekologisk kreftsykdom i henhold til FIGO-klassifisering.",
+          "keywords" : [ "figo, cervix, livmorhals, livmor, endometrium, corpus uteri, eggstokk, ovarie, eggleder, peritoneum, bukhinne, vulva, vagina, placenta, morkake, trofoblastsykdom, leiomyosarkom, adenosarkom, endometriestromasarkom, udifferensiert uterint sarkom, gynekologisk, gynekologi, bekken, klassifisering, stadium, stadieinndeling, svulst, kreft, neoplasi, onkologi" ],
+          "use" : "Brukes for å registrere stadium av gynekologisk kreftsykdom i henhold til FIGO-klassifisering\r\n\r\nArketypen er laget for å benyttes i en ENTRY eller CLUSTER arketype som vil gi den kliniske eller patologiske konteksten for FIGO-registreringen. For eksempel: I SLOTet \"Spesifikke detaljer\" i arketypen EVALUATION.problem_diagnosis (Problem/diagnose), i en relevant patologirelatert CLUSTER-arketype som igjen nøstes i laboratoriesvar-arketypen (OBSERVATION.laboratory_test_result), i arketypen OBSERVATION.imaging_exam_result (Bildediagnostisk svar) eller innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk passende. Når denne arketypen må inkluderes i en ikke-OBSERVATION-arketype, som for eksempel Problem/diagnose-arketypen (EVALUATION.problem_diagnosis), bør den først nøstes i Klinisk grunnlag-arketypen (CLUSTER.clinical_evidence) for å gi viktig kontekst, slik som vurderingsdato.\r\n\r\nHver gynekologisk krefttype er tildelt en FIGO-stadieinndeling, som oppdateres og publiseres på nytt med jevne mellomrom. Det forventes at implementatorer bruker en kunnskapsbase som inneholder det relevante verdiutvalget for den spesifikke krefttypen og revisjonen, og bruker denne til å fylle ut dette rammeverket under kjøring. I fravær av en kunnskapsbase kan det relevante verdiutvalget manuelt integreres i dataelementet \"FIGO-stadium\" innenfor et forhåndsdefinert templat.",
+          "misuse" : "Skal ikke brukes for å registrere FIGO-klassifisering av tilstander annet enn gynekologisk kreft. For eksempel FIGOs klassifiseringssystem (PALM-COEIN) for årsaker til unormal livmorblødning.\r\nSkal ikke brukes for å registrere non-FIGO-klassifisering av gynekologisk kreft.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the stage of gynaecological cancer according to the FIGO classification systems.",
+          "keywords" : [ "figo, cervix, corpus uteri, endometrium, uterus, ovary, fallopian tube, peritoneum, vulva, vagina, placenta, gestational trophoblastic neoplasia, leiomyosarcoma, adenosarcoma, undifferentiated uterine sarcoma, endometrial stromal sarcoma, gynaecological, gynecology, gynaecology, pelvis, pelvic, classification, stage, staging, tumor, cancer, neoplasia, oncology" ],
+          "use" : "Use to record the stage of gynaecological cancer according to the FIGO classification systems\r\n\r\nThis archetype has been designed to be nested inside an ENTRY or appropriate CLUSTER archetype which will provide a clinical or pathological context for the FIGO stage - for example: the 'Specific details' SLOT within the EVALUATION.problem_diagnosis archetype; an appropriate histopathology-related CLUSTER archetype within the OBSERVATION.laboratory_test_result archetype context; within the OBSERVATION.imaging_exam_result archetype; or within other ENTRY or CLUSTER archetypes, where clinically appropriate. When this archetype needs to be included within an non-OBSERVATION archetype such as EVALUATION.problem_diagnosis, it should first be nested within the CLUSTER.clinical_evidence to provide important context such as the date of the assessment.\r\n\r\nEach gynaecological cancer has been assigned a FIGO staging criteria, which are periodically updated and republished. It is anticipated that implementers will utilise a knowledge base containing the appropriate value set for the specific cancer and revision, and use it to populate this archetype framework at runtime. In the absence of a knowledge base, the relevant value set can be manually incorporated into the 'FIGO stage element' within a predefined template.",
+          "misuse" : "Not to be used for FIGO classification of conditions other than gynecological cancer. For example FIGO classification system (PALM-COEIN) for causes of abnormal uterine bleeding.\r\nNot to be used for recording non-FIGO classifications of gynaecological cancer.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.figo_staging_cancer.v1",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-figo_staging_cancer-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0007", "at0008", "at0009", "at0010", "at0011", "at0012", "at0013" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "922c202b-eca6-424e-93b8-c7da13b5773d",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand, Kanika Kuwelker",
+        "organisation" : "Helse Vest IKT",
+        "email" : "john.tore.valand@helse-vest-ikt.no, kanika.kuwelker@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "f3a7338f-3e94-4bea-9f5c-c01cf7ef7a46",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "47AB381BAFD9CB65BAE38B0E556B6C31"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.figo_staging_cancer.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-figo_staging_cancer-003.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
