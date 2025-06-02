@@ -1,0 +1,1037 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "212265e0-4a63-4eac-9f04-b22d4b4283e8",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2025-06-02"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "4153bb18b69df205895d1ad8aa1f02ee",
+      "PARENT:MD5-CAM-1.0.1" : "D208D25865EF6A8590CAC3E4299A25F4"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ca" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ca"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-OBSERVATION.problem_screening.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-OBSERVATION.problemdiagnosis screening questionnaire (3).v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "OBSERVATION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "HISTORY",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "events",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "POINT_EVENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ITEM_TREE",
+                "nodeId" : "at0003",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "items",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "nodeId" : "at0034.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_CODED_TEXT",
+                        "occurrences" : "1..1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "defining_code",
+                          "children" : [ {
+                            "@type" : "C_TERMINOLOGY_CODE",
+                            "rmTypeName" : "TERMINOLOGY_CODE",
+                            "occurrences" : "0..1",
+                            "terminologyId" : {
+                              "value" : "no.onk.kart.skip_fraktur.sarkom"
+                            },
+                            "constraint" : [ ],
+                            "selectedTerminologies" : [ "no.onk.kart.skip_fraktur.sarkom" ],
+                            "includedExternalTerminologyCodes" : [ {
+                              "terminologyId" : "no.onk.kart.skip_fraktur.sarkom",
+                              "code" : "01",
+                              "value" : "Sarkom"
+                            } ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "occurrences" : "0..0",
+                    "nodeId" : "at0028.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_CODED_TEXT",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "defining_code",
+                          "children" : [ {
+                            "@type" : "C_TERMINOLOGY_CODE",
+                            "rmTypeName" : "TERMINOLOGY_CODE",
+                            "occurrences" : "1..1",
+                            "terminologyId" : {
+                              "value" : "local"
+                            },
+                            "constraint" : [ "ac0.1" ],
+                            "selectedTerminologies" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_TEXT",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_BOOLEAN",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "occurrences" : "0..0",
+                    "nodeId" : "at0043.1",
+                    "attributes" : [ ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0022.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0004.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "0..1",
+                                "terminologyId" : {
+                                  "value" : "SNOMED-CT"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "SNOMED-CT" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "1730561000004100",
+                                  "value" : "Presence of metastatic discontinuous spread of primary malignant neoplasm (observable entity)"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0005.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "SNOMED-CT"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "SNOMED-CT" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "373066001",
+                                  "value" : "Ja"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "373067005",
+                                  "value" : "Nei"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "261665006",
+                                  "value" : "Ukjent"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "1156316003",
+                                  "value" : "Ikke mulig å klassifisere"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0040.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_TEXT",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_DURATION",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_DATE_TIME",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0025.1",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0022.2",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0004.2",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "0..1",
+                                "terminologyId" : {
+                                  "value" : "SNOMED-CT"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "SNOMED-CT" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "268029009",
+                                  "value" : "Pathological fracture (disorder)"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0005.2",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "SNMED-CT"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "SNMED-CT" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "SNMED-CT",
+                                  "code" : "373066001",
+                                  "value" : "Ja"
+                                }, {
+                                  "terminologyId" : "SNMED-CT",
+                                  "code" : "373067005",
+                                  "value" : "Nei"
+                                }, {
+                                  "terminologyId" : "SNMED-CT",
+                                  "code" : "261665006",
+                                  "value" : "Ukjent"
+                                }, {
+                                  "terminologyId" : "SNMED-CT",
+                                  "code" : "1156316003",
+                                  "value" : "Ikke mulig å klassifisere"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0040.2",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_TEXT",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_DURATION",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_DATE_TIME",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0025.2",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Problem/Diagnosis screening questionnaire (3)",
+          "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
+          "comment" : "The answers may be self-reported."
+        },
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Specific problem or diagnosis (2)",
+          "description" : "Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presence?",
+          "description" : "Is there a history of the specific issue, problem or diagnosis related to the screening purpose?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Onset",
+          "description" : "Timing of the initial recognition of the issue, problem or diagnosis.",
+          "comment" : "The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presence?",
+          "description" : "Is there a history of the specific issue, problem or diagnosis related to the screening purpose?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presence?",
+          "description" : "Is there a history of the specific issue, problem or diagnosis related to the screening purpose?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Onset",
+          "description" : "Timing of the initial recognition of the issue, problem or diagnosis.",
+          "comment" : "The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset."
+        },
+        "at0040.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Onset",
+          "description" : "Timing of the initial recognition of the issue, problem or diagnosis.",
+          "comment" : "The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "Unsure",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "Unsure",
+          "description" : ""
+        }
+      },
+      "nb" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.2",
+          "text" : "Spesifikt problem eller diagnose (2)",
+          "description" : "Detaljer om en spesifikt bekymring, plage, problem eller diagnose eller gruppe av bekymringer, plager, problemer eller diagnoser som er innenfor kartleggingsformålet."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Skipmetastase?",
+          "description" : "Har den spesifikke bekymring, plage, problem eller diagnose noen gang vært til stede?",
+          "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.2",
+          "text" : "Patologisk fraktur?",
+          "description" : "Har den spesifikke bekymring, plage, problem eller diagnose noen gang vært til stede?",
+          "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Usikker",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Usikker",
+          "description" : ""
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Debut",
+          "description" : "Tidsrommet da en oppdaget bekymringen, plagen, problemet eller diagnosen.",
+          "comment" : "Dataelementet \"Debut\" er løst modellert for å støtte ulike måter spørsmål om tidsrom for debut av et problem eller diagnose stilles i et spørreskjema. Den spesifikke og tiltenkte semantikken defineres i et templat. For eksempel: Dato/klokkeslett brukes for dato for når diagnosen ble bekreftet. Intervall av dato/ klokkeslett brukes for å sette en tidsperiode, for eksempel mellom 1940 og 1942. Tekst brukes for spørsmålstillinger som \"Rett etter en operasjon\", \"For en uke siden\", \"Opp til to uker siden\", \"Tre uker siden\". Varighet brukes for å registrere individets alder ved debut. Intervall av varighet for å registrere tilnærmet alder ved debut."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Debut",
+          "description" : "Tidsrommet da en oppdaget bekymringen, plagen, problemet eller diagnosen.",
+          "comment" : "Dataelementet \"Debut\" er løst modellert for å støtte ulike måter spørsmål om tidsrom for debut av et problem eller diagnose stilles i et spørreskjema. Den spesifikke og tiltenkte semantikken defineres i et templat. For eksempel: Dato/klokkeslett brukes for dato for når diagnosen ble bekreftet. Intervall av dato/ klokkeslett brukes for å sette en tidsperiode, for eksempel mellom 1940 og 1942. Tekst brukes for spørsmålstillinger som \"Rett etter en operasjon\", \"For en uke siden\", \"Opp til to uker siden\", \"Tre uker siden\". Varighet brukes for å registrere individets alder ved debut. Intervall av varighet for å registrere tilnærmet alder ved debut."
+        },
+        "at0040.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Debut",
+          "description" : "Tidsrommet da en oppdaget bekymringen, plagen, problemet eller diagnosen.",
+          "comment" : "Dataelementet \"Debut\" er løst modellert for å støtte ulike måter spørsmål om tidsrom for debut av et problem eller diagnose stilles i et spørreskjema. Den spesifikke og tiltenkte semantikken defineres i et templat. For eksempel: Dato/klokkeslett brukes for dato for når diagnosen ble bekreftet. Intervall av dato/ klokkeslett brukes for å sette en tidsperiode, for eksempel mellom 1940 og 1942. Tekst brukes for spørsmålstillinger som \"Rett etter en operasjon\", \"For en uke siden\", \"Opp til to uker siden\", \"Tre uker siden\". Varighet brukes for å registrere individets alder ved debut. Intervall av varighet for å registrere tilnærmet alder ved debut."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        }
+      },
+      "de" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "*Problem/Diagnosis screening questionnaire (en) (3)",
+          "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
+          "comment" : "*The answers may be self-reported. (en)"
+        },
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Bestimmter Zustand (2)",
+          "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Problem/Diagnosis screening questionnaire (en)",
+          "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
+          "comment" : "*The answers may be self-reported. (en)"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Problem/diagnosis name (en)",
+          "description" : "*Name of a problem or diagnosis; or grouping of problems or diagnoses. (en)",
+          "comment" : "*Coding of the Problem/Diagnosis name with a terminology is preferred, where possible. (en)"
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Vorhanden?",
+          "description" : "*Is there a history of the specific problem or diagnosis related to the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Erweiterung",
+          "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
+          "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Bestimmter Zustand",
+          "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "*Yes (en)",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*No (en)",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "*Additional narrative about the specified condition, not captured in other fields. (en)"
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "*Any problems or diagnoses? (en)",
+          "description" : "*Is there a history of any issues, problems or diagnoses relevant for the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)"
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "*Yes (en)",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "*No (en)",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Zweck des Screenings",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: pre-admission screening or the name of the actual questionnaire. (en)"
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "*Additional details (en)",
+          "description" : "*Structured details or questions about the specific problem or diagnosis. (en)",
+          "comment" : "*For example; hospital where treated. (en)"
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Age at diagnosis (en)",
+          "description" : "*The age of the individual when the condition was diagnosed or recognised. (en)",
+          "comment" : "*The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset. (en)"
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "*Additional details (en)",
+          "description" : "*Structured details or questions about the overall problems or diagnoses. (en)"
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "*Description (en)",
+          "description" : "*Narrative description about the history of any issues, problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "*Additional narrative about the specified condition, not captured in other fields. (en)"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Problem/diagnosis name (en)",
+          "description" : "*Name of a problem or diagnosis; or grouping of problems or diagnoses. (en)",
+          "comment" : "*Coding of the Problem/Diagnosis name with a terminology is preferred, where possible. (en)"
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Vorhanden?",
+          "description" : "*Is there a history of the specific problem or diagnosis related to the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0004.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Problem/diagnosis name (en)",
+          "description" : "*Name of a problem or diagnosis; or grouping of problems or diagnoses. (en)",
+          "comment" : "*Coding of the Problem/Diagnosis name with a terminology is preferred, where possible. (en)"
+        },
+        "at0025.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "*Additional narrative about the specified condition, not captured in other fields. (en)"
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Vorhanden?",
+          "description" : "*Is there a history of the specific problem or diagnosis related to the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "*Any problems or diagnoses? (en)",
+          "description" : "*Is there a history of any issues, problems or diagnoses relevant for the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)"
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Age at diagnosis (en)",
+          "description" : "*The age of the individual when the condition was diagnosed or recognised. (en)",
+          "comment" : "*The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset. (en)"
+        },
+        "at0040.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Age at diagnosis (en)",
+          "description" : "*The age of the individual when the condition was diagnosed or recognised. (en)",
+          "comment" : "*The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset. (en)"
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Zweck des Screenings",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: pre-admission screening or the name of the actual questionnaire. (en)"
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "*Description (en)",
+          "description" : "*Narrative description about the history of any issues, problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Bestimmter Zustand",
+          "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        }
+      },
+      "nl" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "*Problem/Diagnosis screening questionnaire (en) (3)",
+          "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
+          "comment" : "*The answers may be self-reported.(en)"
+        },
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "*Specifieke aandoening (2)",
+          "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of the specific problem or diagnosis related to the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Leeftijd ten tijde van diagnose",
+          "description" : "The age of the individual when the condition was diagnosed or recognised.(en)",
+          "comment" : "*The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset. (en)"
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of the specific problem or diagnosis related to the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of the specific problem or diagnosis related to the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Leeftijd ten tijde van diagnose",
+          "description" : "The age of the individual when the condition was diagnosed or recognised.(en)",
+          "comment" : "*The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset. (en)"
+        },
+        "at0040.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Leeftijd ten tijde van diagnose",
+          "description" : "The age of the individual when the condition was diagnosed or recognised.(en)",
+          "comment" : "*The 'Onset' data element is deliberately loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of a problem or the timing of a diagnosis. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date of diagnosis. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset. (en)"
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : {
+      "ac0.1" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.1",
+        "members" : [ "at0031", "at0032", "at0033" ]
+      },
+      "ac0.3" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.3",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.4" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.4",
+        "members" : [ ]
+      },
+      "ac0.5" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.5",
+        "members" : [ ]
+      }
+    }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "71a2f924-c2bc-3ded-b2c9-e7c77cb2dfa9",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "Problem/Diagnosis screening questionnaire_skip_patologisk",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : {
+      "application" : "Adl Designer"
+    },
+    "otherDetails" : {
+      "notes" : "Generated automatically by Adl Designer"
+    }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ca"
+    },
+    "author" : {
+      "application" : "Adl Designer"
+    },
+    "otherDetails" : {
+      "notes" : "Generated automatically by Adl Designer"
+    }
+  } ]
+}
