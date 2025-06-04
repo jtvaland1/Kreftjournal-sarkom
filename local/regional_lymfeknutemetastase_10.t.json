@@ -20,9 +20,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "d38d95b7e7084f4f0499713a600eb537",
+      "MD5-CAM-1.0.1" : "c9b202ce066df4a5dadada77887dc4e0",
       "PARENT:MD5-CAM-1.0.1" : "F3BA1A6809F466FF10AB50CC86EC78C5",
-      "sem_ver" : "1.1.0",
+      "sem_ver" : "1.1.1",
       "build_uid" : ""
     },
     "details" : {
@@ -269,7 +269,7 @@
                     "includedExternalTerminologyCodes" : [ {
                       "terminologyId" : "SNOMED-CT",
                       "code" : "399374009",
-                      "value" : "Regionale lymfeknutemetastaser"
+                      "value" : "Regional lymph node metastasis present (finding)"
                     } ]
                   } ]
                 } ],
@@ -280,7 +280,7 @@
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
+            "occurrences" : "0..1",
             "nodeId" : "at0079.1",
             "attributes" : [ {
               "@type" : "C_ATTRIBUTE",
@@ -2367,7 +2367,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Regional lymfeknutemetastase",
+          "text" : "Regional lymfeknutemetastase_10",
           "description" : "Detaljer om funn av lymfeknutemetastase.",
           "comment" : "Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose."
         },
@@ -2376,7 +2376,14 @@
           "code" : "at0002.1",
           "text" : "Regional lymfeknutemetastase",
           "description" : "Angir at det er regionale lymfeknutemetastaser tilstede. ",
-          "comment" : "Bruker SNOMED-CT koden 399374009 | Regional lymph node metastasis present (finding) | for å klassifisisere problemet. "
+          "comment" : "Bruker SNOMED-CT koden 399374009 - Regional lymph node metastasis present (finding), for å klassifisisere problemet. "
+        },
+        "at0079.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0079",
+          "text" : "Variant",
+          "description" : "Spesifikk variant eller subtype av diagnose, hvis det er relevant.",
+          "comment" : "Designkommentar:\nDenne blir i Brystkreft brukt til ICD10 koder for regional lymfeknutemetastase. \nVed andre kreftformer kan det være at denne er overflødig."
         },
         "at0000" : {
           "@type" : "ARCHETYPE_TERM",
@@ -2561,13 +2568,6 @@
           "code" : "at0069",
           "text" : "Kommentar",
           "description" : "Utdypende fritekst om problemet eller diagnosen, som ikke passer i andre felt."
-        },
-        "at0079.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0079",
-          "text" : "Variant",
-          "description" : "Spesifikk variant eller subtype av diagnose, hvis det er relevant.",
-          "comment" : "For eksempel \"akutt motorisk aksonal nevropati\" som en variant av Guillain-Barre Syndrom. Koding av navnet på varianten med en terminologi er foretrukket hvis mulig."
         },
         "at0005.1" : {
           "@type" : "ARCHETYPE_TERM",
@@ -5008,7 +5008,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..*",
+          "occurrences" : "0..0",
           "nodeId" : "at0065.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -5049,7 +5049,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..1",
-          "nodeId" : "at0002",
+          "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
@@ -5064,12 +5064,13 @@
                 "existence" : "1..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0003", "at0004" ]
+                  "constraint" : [ "ac0.3" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -5261,6 +5262,12 @@
             "code" : "ac0.2",
             "description" : ""
           },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
           "at0000" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
@@ -5471,6 +5478,13 @@
             "code" : "at0082",
             "text" : "*Dorsal(en)",
             "description" : "*Towards the back of the hand or top of the foot. To be used as opposites of palmar or plantar, not as a synonym of posterior.(en)"
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "*Laterality(en)",
+            "description" : "*The side of the body on which the identified  body site is located.(en)",
+            "comment" : "*If the identified body site has no laterality, this data element should not have a value. \r\nIf the 'Body site name' data element uses pre-coordinated terms that include laterality, then this data element is redundant.(en)"
           },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -5527,6 +5541,12 @@
             "code" : "ac0.2",
             "description" : ""
           },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
           "at0000" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
@@ -5738,6 +5758,13 @@
             "text" : "*Dorsal(en)",
             "description" : "*Towards the back of the hand or top of the foot. To be used as opposites of palmar or plantar, not as a synonym of posterior.(en)"
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "*Laterality(en)",
+            "description" : "*The side of the body on which the identified  body site is located.(en)",
+            "comment" : "*If the identified body site has no laterality, this data element should not have a value. \r\nIf the 'Body site name' data element uses pre-coordinated terms that include laterality, then this data element is redundant.(en)"
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -5791,6 +5818,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
             "description" : ""
           },
           "at0000" : {
@@ -6004,6 +6037,13 @@
             "text" : "Dorsal",
             "description" : "Towards the back of the hand or top of the foot. To be used as opposites of palmar or plantar, not as a synonym of posterior."
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Laterality",
+            "description" : "The side of the body on which the identified  body site is located.",
+            "comment" : "If the identified body site has no laterality, this data element should not have a value. \r\nIf the 'Body site name' data element uses pre-coordinated terms that include laterality, then this data element is redundant."
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -6059,7 +6099,7 @@
             "code" : "at0001.1",
             "text" : "Navn på kroppssted",
             "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
-            "comment" : "Angir hvor den regionale lymfeknutemetastasen ble funnet. \nBrystkreft bruker p.t ingen anatomisk lokalisering. Den er da implisitt til aksille. \n\nKoden for annet kroppsted er  enten \n\n385421009 | Anatomic location of metastatic spread of malignant neoplasm (observable entity) |\n\neller \n\n74964007 | annen | (qualifier value) "
+            "comment" : "Angir hvor den regionale lymfeknutemetastasen ble funnet. \nBrystkreft bruker p.t ingen anatomisk lokalisering. Den er da implisitt til aksille. \n\nKoden for annet kroppsted er \n74964007 - annen (qualifier value) "
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -6079,6 +6119,18 @@
             "text" : "Spesifikt sted",
             "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
             "comment" : "Spesifikt sted kan f.eks. benyttes for å kode at bryst har fått lymfeknutemetastase til begge bryst. "
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Kroppsside",
+            "description" : "Den identifiserte kroppssiden."
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
           },
           "at0000" : {
             "@type" : "ARCHETYPE_TERM",
@@ -6326,6 +6378,12 @@
             "code" : "ac0.2",
             "description" : ""
           },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
           "at0000" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
@@ -6537,6 +6595,13 @@
             "text" : "*Dorsal(en)",
             "description" : "*Towards the back of the hand or top of the foot. To be used as opposites of palmar or plantar, not as a synonym of posterior.(en)"
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Lateralidade",
+            "description" : "O lado do corpo em que se encontra o local do corpo identificado.",
+            "comment" : "Se o local identificado do corpo não tem relação com a lateralidade, este elemento de dados não deve ter um valor.\r\nSe o elemento de dados de nome de local do corpo usa termos predefinidos que incluem lateralidade, então este elemento de dados é redundante."
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -6590,6 +6655,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           },
           "at0000" : {
@@ -6803,6 +6874,13 @@
             "text" : "Dorsal",
             "description" : "In Richtung des Handrückens oder des Fußrückens hin gelegen. Als Gegenstück zu Palmar oder Plantar, nicht als Synonym für posterior."
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Lateralität",
+            "description" : "Die Seite des Körpers, an der sich die identifizierte Körperstelle befindet.",
+            "comment" : "Wenn die identifizierte Körperstelle keine Seitenlage aufweist, sollte dieses Datenelement keinen Wert haben. Wenn das Datenelement \"Name der Körperstelle\" präkoordinierte Bezeichnungen verwendet, die eine Seitenlokalisation einschließt, dann ist dieses Datenelement redundant."
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -6856,6 +6934,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           },
           "at0000" : {
@@ -7064,6 +7148,12 @@
             "text" : "Dorsaal",
             "description" : "Naar de rug van de hand of de voet. Gebruik als tegenovergestelde van palmair of plantair, en niet als synoniem voor posterior."
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Lateraliteit",
+            "description" : "De zijde van het lichaam waarop de geïdentificeerde Lichaamslocatie zich bevindt."
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -7114,6 +7204,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           },
           "at0000" : {
@@ -7327,6 +7423,13 @@
             "text" : "Dorsal",
             "description" : "I riktning mot handens baksida eller fotens ovansida. Används som motsats till palmar och plantar, inte som en synonym till bakre."
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Lateralitiet",
+            "description" : "Den sidan av kroppen där det identifierade kroppstället är lokaliserad. \r\n",
+            "comment" : "Om det identifierade kroppstället saknar lateralitet, ska detta data element inte ha ett värde. \r\nOm data elementet \"Namn på kroppställe\" har prekoordinerade termer som innefattar lateralitet, då blir detta data element överflödig. \r\n\r\n"
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -7380,6 +7483,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           },
           "at0000" : {
@@ -7593,6 +7702,13 @@
             "text" : "Dorsale",
             "description" : "Vers le dos de la main ou le dessus du pied. A utiliser en opposition à palmaire ou plantaire, et non comme synonyme de postérieur."
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Latéralité",
+            "description" : "Le côté du corps sur lequel se trouve le site identifié.",
+            "comment" : "Si le site corporel identifié n'a pas de latéralité, cet élément de données ne doit pas avoir de valeur. \r\nSi l'élément de données \"Nom du site corporel\" utilise des termes pré-coordonnés qui incluent la latéralité, cet élément de données est redondant."
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -7638,6 +7754,7 @@
       },
       "termBindings" : {
         "SNOMED-CT" : {
+          "at0002.1" : "term:SNOMED-CT::272741003",
           "at0002" : "term:SNOMED-CT::272741003",
           "at0003" : "term:SNOMED-CT::7771000",
           "at0004" : "term:SNOMED-CT::24028007"
@@ -7654,6 +7771,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.2",
           "members" : [ "at0062", "at0056", "at0057", "at0058", "at0059", "at0060", "at0063" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0003", "at0004" ]
         }
       }
     },
@@ -7917,7 +8039,7 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "399374009",
-                    "value" : "Regional lymfeknutemetastase"
+                    "value" : "Regional lymph node metastasis present (finding)"
                   } ]
                 } ]
               } ],
@@ -8397,7 +8519,7 @@
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
-            "text" : "Spesifier annet",
+            "text" : "Spesifiser annen metode",
             "description" : "Fritekstbeskrivelse av annen metode som ble brukt for å komme fram til funnet."
           },
           "at0006.1" : {
@@ -8405,7 +8527,13 @@
             "code" : "at0006",
             "text" : "Dato",
             "description" : "Dato/tid til resultatet eller funnet.",
-            "comment" : "Benyttes i Sarkom for dato den regionale lymfeknutemetastasen ble påvist. \n\n\nFor eksempel når en klinisk undersøkelse ble gjort. For laboratorieanalyser eller bildediagnostikk er dette dato/tid for når prøven eller bildet ble tatt."
+            "comment" : "Benyttes i Sarkom for dato den regionale lymfeknutemetastasen ble påvist. \n\nFor eksempel når en klinisk undersøkelse ble gjort. For laboratorieanalyser eller bildediagnostikk er dette dato/tid for når prøven eller bildet ble tatt."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Grunnlag",
+            "description" : "Identifisering av en forekomst av et klinisk grunnlag, enten ved navn eller type, som et enkelt resultat eller en gruppe av resultater."
           },
           "at0000" : {
             "@type" : "ARCHETYPE_TERM",
@@ -8488,13 +8616,6 @@
             "code" : "at0026",
             "text" : "Dato/tid for klinisk relevans",
             "description" : "Dato/tid når resultatet ble tatt inn som grunnlag for utsagnet."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Grunnlag",
-            "description" : "Identifisering av en forekomst av et klinisk grunnlag, enten ved navn eller type, som et enkelt resultat eller en gruppe av resultater.",
-            "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig. For eksempel \"Mantoux test\", \"AFP nivå\", \"Tumorstørrelse\", \"Genetisk test\", \"BRCA1 test\", \"Histopatologisvar\", \"Fysisk funn\", \"Funn ved operasjon\", \"FIGO stadium\", \"Symptom\", \"Tumorgradering\", \"Klinisk inntrykk\". Dersom grunnlaget er tilstrekkelig identifisert i \"Resultat\" eller \"Strukturert resultat\" kan dette elementet være overflødig, og har derfor blitt satt som valgfritt."
           },
           "at0024.1" : {
             "@type" : "ARCHETYPE_TERM",
