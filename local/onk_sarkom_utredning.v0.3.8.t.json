@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "89.0.0",
+      "sem_ver" : "90.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e42c51f0a3b825f0261e4621eeabd4b9",
+      "MD5-CAM-1.0.1" : "c00056b232d5f3d931c443e4482f6366",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -9603,7 +9603,7 @@
                                   }, {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "25173007",
-                                    "value" : "Lokalt residiv/progresjon (med eller uten metastase(r))"
+                                    "value" : "Lokalt residiv (med eller uten metastase(r))"
                                   }, {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "128462008",
@@ -37210,6 +37210,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0102.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -37227,7 +37228,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.26" ],
+                  "constraint" : [ "ac0.30" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -37255,7 +37256,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.27" ],
+                  "constraint" : [ "ac0.32" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -37335,6 +37336,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0071.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -37507,16 +37509,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37527,16 +37529,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37547,16 +37549,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37588,16 +37590,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37608,16 +37610,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37628,16 +37630,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37648,16 +37650,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37668,16 +37670,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37688,16 +37690,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         },
@@ -37708,16 +37710,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.30" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.30",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.32" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.32",
             "description" : ""
           }
         }
@@ -37850,6 +37852,31 @@
         "ac0.27" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.27",
+          "members" : [ "at0097" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "at0105" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "at0105" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0105" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0097" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
           "members" : [ "at0097" ]
         }
       }
