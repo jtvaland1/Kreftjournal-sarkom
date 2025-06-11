@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "90.1.0",
+      "sem_ver" : "91.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "84567ac71515d0520c5f680ce63fb96a",
+      "MD5-CAM-1.0.1" : "62fb4f45d408ede517d8a886056fb866",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -40910,6 +40910,10 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "399734001",
                     "value" : "Primary tumor size (observable entity)"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "263605001",
+                    "value" : "Length dimension of neoplasm (observable entity)"
                   } ]
                 } ]
               } ],
