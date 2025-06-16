@@ -1,0 +1,1362 @@
+= Utredning sarkom kreftjournal
+
+
+== Metadata
+
+
+TemplateId:: onk_sarkom_utredning.v0.4.0
+
+
+Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
+
+
+
+
+:toc:
+
+
+
+
+// Not supported rmType COMPOSITION
+== EVENT_CONTEXT
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*EVENT_CONTEXT* + 
+EVENT_CONTEXT: __
+5+a|*Template versjonsinformasjon* + 
+CLUSTER: _openEHR-EHR-CLUSTER.template_semver_dips.v1_
+|at0001| 0..1| DV_CODED_TEXT | Navn
+a|
+* Sarkom utredning (no.onk.template.sarkom: S01)
+|====
+== Kartleggingsspørsmål om problemer eller diagnoser (tumorhendelse)
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartleggingsspørsmål om problemer eller diagnoser (tumorhendelse)* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Tumorhendelse (no.onk.kartlegging: 03)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0043| 0..1| DV_TEXT | Merknad tumorhendelse
+a|
+5+a|*Spesifikt problem eller diagnose (primærtumor)* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Problem/diagnosenavn
+a|
+* Primærtumor (med eller uten metastase(r)) (SNOMED-CT: 372087000)
+* Lokalt residiv (med eller uten metastase(r)) (SNOMED-CT: 25173007)
+* Kun metastase(r) (SNOMED-CT: 128462008)
+
+
+Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Tilstede?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|====
+== Kartleggingspørsmål om sykdomshåndtering (henvisning)
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartleggingspørsmål om sykdomshåndtering (henvisning)* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.management_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Henvist_fra (no.onk.kartlegging: 06)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+5+a|*Sykdomshåndteringsaktivitet* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Navn på sykdomshåndtering
+a|
+* Referral to further evaluation and/or treatment (situation) (SNOMED-CT: 10051000202100)
+
+
+For eksempel: 
+- Innlagt på sykehus
+- Innlagt på intensivavdeling
+- Bruk av kompresjonstrømper
+- Daglige sårskift
+- ECMO
+
+Koding av "Navn på sykdomshåndtering/behandling" med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Spesifikk sykdomshåndtering?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0037| 0..1| DV_DATE_TIME | Dato for henvisning sarkomsenter
+|
+
+
+Dataelementet "Start" er løst modellert for å støtte ulike måter spørsmål om tidsrom for start av sykdomshåndtering eller behandling stilles i et spørreskjema. Den spesifikke og tiltenkte semantikken defineres i et templat. For eksempel: Dato/klokkeslett brukes for dato for når behandlingen ble utført. Intervall av dato/ klokkeslett brukes for å sette en tidsperiode, for eksempel mellom 1940 og 1942. Tekst brukes for spørsmålstillinger som "Rett etter en operasjon", "For en uke siden", "Opp til to uker siden", "Tre uker siden". Varighet brukes for å registrere individets alder ved debut. Intervall av varighet for å registrere tilnærmet alder ved behandling.
+5+a|*Organisasjon* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_CODED_TEXT | Henvist fra
+a|
+* Helse Sør-Øst (no.onk.sykehusnavnrhf: 1)
+* Helse Vest (no.onk.sykehusnavnrhf: 2)
+* Helse Midt (no.onk.sykehusnavnrhf: 3)
+* Helse Nord (no.onk.sykehusnavnrhf: 4)
+* Spesialistsentre og private (no.onk.sykehusnavnrhf: 5)
+* Fastlege (no.onk.sykehusnavnrhf: 7)
+* Annet (no.onk.sykehusnavnrhf: 6)
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Helse sør-øst* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_CODED_TEXT | SykehusnavnHFSorOST
+a|
+* Akershus Universitetssykehus HF, Kongsvinger (no.onk.sykehusnavnhfsorost: 0402)
+* Akershus Universitetssykehus HF, Lørenskog (no.onk.sykehusnavnhfsorost: 0208)
+* Diakonhjemmets Sykehus (no.onk.sykehusnavnhfsorost: 0304)
+* Lovisenberg Diakonale Sykehus (no.onk.sykehusnavnhfsorost: 0306)
+* Oslo universitetssykehus HF, Aker sykehus (no.onk.sykehusnavnhfsorost: 0301)
+* Oslo universitetssykehus HF, Radiumhospitalet (no.onk.sykehusnavnhfsorost: 0305)
+* Oslo universitetssykehus HF, Rikshospitalet (no.onk.sykehusnavnhfsorost: 0316)
+* Oslo universitetssykehus HF, Ullevål sykehus (no.onk.sykehusnavnhfsorost: 0320)
+* Sykehuset Innlandet HF, Elverum (no.onk.sykehusnavnhfsorost: 0404)
+* Sykehuset Innlandet HF, Gjøvik (no.onk.sykehusnavnhfsorost: 0501)
+* Sykehuset Innlandet HF, Hamar (no.onk.sykehusnavnhfsorost: 0403)
+* Sykehuset Innlandet HF, Lillehammer (no.onk.sykehusnavnhfsorost: 0502)
+* Sykehuset Innlandet HF, Tynset (no.onk.sykehusnavnhfsorost: 0405)
+* Sykehuset i Vestfold HF, Larvik (no.onk.sykehusnavnhfsorost: 0703)
+* Sykehuset i Vestfold HF, Sandefjord (no.onk.sykehusnavnhfsorost: 0705)
+* Sykehuset i Vestfold HF, Tønsberg (no.onk.sykehusnavnhfsorost: 0707)
+* Sykehuset Telemark HF, Kragerø (no.onk.sykehusnavnhfsorost: 0804)
+* Sykehuset Telemark HF, Notodden (no.onk.sykehusnavnhfsorost: 0805)
+* Sykehuset Telemark HF, Porsgrunn (no.onk.sykehusnavnhfsorost: 0806)
+* Sykehuset Telemark HF, Rjukan (no.onk.sykehusnavnhfsorost: 0807)
+* Sykehuset Telemark HF, Skien (no.onk.sykehusnavnhfsorost: 0808)
+* Sykehuset Østfold HF, Askim (no.onk.sykehusnavnhfsorost: 0101)
+* Sykehuset Østfold HF, Kalnes (no.onk.sykehusnavnhfsorost: 0105)
+* Sykehuset Østfold HF, Moss (no.onk.sykehusnavnhfsorost: 0103)
+* Sykehuset Østfold HF, Spesialistsenteret (no.onk.sykehusnavnhfsorost: 0104)
+* Sørlandet Sykehus HF, Arendal (no.onk.sykehusnavnhfsorost: 0904)
+* Sørlandet Sykehus HF, Flekkefjord (no.onk.sykehusnavnhfsorost: 1003)
+* Sørlandet Sykehus HF, Kristiansand (no.onk.sykehusnavnhfsorost: 1005)
+* Vestre Viken HF, Bærum sykehus (no.onk.sykehusnavnhfsorost: 0202)
+* Vestre Viken HF, Drammen sykehus (no.onk.sykehusnavnhfsorost: 0601)
+* Vestre Viken HF, Kongsberg sykehus (no.onk.sykehusnavnhfsorost: 0602)
+* Vestre Viken HF, Ringerike sykehus (no.onk.sykehusnavnhfsorost: 0605)
+* Annet (no.onk.sykehusnavnhfsorost: 1)
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Helse Vest* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_CODED_TEXT | SykehusnavnHFVest
+a|
+* Haraldsplass Diakonale Sykehus (no.onk.sykehusnavnhfvest: 1302)
+* Helse Bergen HF, Haukeland universitetssjukehus (no.onk.sykehusnavnhfvest: 1305)
+* Helse Bergen HF, Voss sjukehus (no.onk.sykehusnavnhfvest: 1203)
+* Helse Fonna HF, Haugesund  sjukehus (no.onk.sykehusnavnhfvest: 1101)
+* Helse Fonna HF, Odda sjukehus (no.onk.sykehusnavnhfvest: 1201)
+* Helse Fonna HF, Stord sjukehus (no.onk.sykehusnavnhfvest: 1202)
+* Helse Førde HF, Florø sjukehus (no.onk.sykehusnavnhfvest: 1401)
+* Helse Førde HF, Førde sjukehus (no.onk.sykehusnavnhfvest: 1406)
+* Helse Førde HF, Lærdal sjukehus (no.onk.sykehusnavnhfvest: 1403)
+* Helse Førde HF, Nordfjordeid sjukehus (no.onk.sykehusnavnhfvest: 1405)
+* Helse Stavanger HF, Stavanger universitetssjukehus, inkl. Sandnes og Egersund (no.onk.sykehusnavnhfvest: 1107)
+* Annet (no.onk.sykehusnavnhfvest: 1)
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Helse Midt* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_CODED_TEXT | SykehusnavnHFMidt
+a|
+* Helse Møre og Romsdal HF, Kristiansund sjukehus (no.onk.sykehusnavnhfmidt: 1501)
+* Helse Møre og Romsdal HF, Molde sjukehus (no.onk.sykehusnavnhfmidt: 1502)
+* Helse Møre og Romsdal HF, Volda sjukehus (no.onk.sykehusnavnhfmidt: 1503)
+* Helse Møre og Romsdal HF, Ålesund sjukehus (no.onk.sykehusnavnhfmidt: 1504)
+* Helse Nord-Trøndelag HF, Sykehuset Levanger (no.onk.sykehusnavnhfmidt: 1701)
+* Helse Nord-Trøndelag HF, Sykehuset Namsos (no.onk.sykehusnavnhfmidt: 1702)
+* St. Olavs Hospital HF, Orkdal sjukehus (no.onk.sykehusnavnhfmidt: 1602)
+* St. Olavs Hospital HF, St. Olavs Hospital (no.onk.sykehusnavnhfmidt: 1608)
+* Annet (no.onk.sykehusnavnhfmidt: 1)
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Helse Nord* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_CODED_TEXT | SykehusnavnHFNord
+a|
+* Finnmarkssykehuset HF, Hammerfest sykehus (no.onk.sykehusnavnhfnord: 2001)
+* Finnmarkssykehuset HF, Kirkenes sykehus (no.onk.sykehusnavnhfnord: 2002)
+* Helgelandsykehuset HF, Mo i Rana (no.onk.sykehusnavnhfnord: 1807)
+* Helgelandsykehuset HF, Mosjøen (no.onk.sykehusnavnhfnord: 1805)
+* Helgelandsykehuset HF, Sandnessjøen (no.onk.sykehusnavnhfnord: 1809)
+* Nordlandssykehuset HF, Bodø (no.onk.sykehusnavnhfnord: 1801)
+* Nordlandssykehuset HF, Lofoten (no.onk.sykehusnavnhfnord: 1804)
+* Nordlandssykehuset HF, Vesterålen (no.onk.sykehusnavnhfnord: 1811)
+* Universitetssykehuset i Nord-Norge HF, Harstad (no.onk.sykehusnavnhfnord: 1902)
+* Universitetssykehuset i Nord-Norge HF, Longyearbyen (no.onk.sykehusnavnhfnord: 2101)
+* Universitetssykehuset i Nord-Norge HF, Narvik (no.onk.sykehusnavnhfnord: 1806)
+* Universitetssykehuset i Nord-Norge HF, Tromsø (no.onk.sykehusnavnhfnord: 1903)
+* Annet (no.onk.sykehusnavnhfnord: 1)
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Spesialistsentre og private* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_CODED_TEXT | SyhkehusnavnSpesSenter
+a|
+* Aleris Bodø (no.onk.sykehusnavnspessenter: 6089)
+* Aleris Colosseum-Nobel, Olso (no.onk.sykehusnavnspessenter: 6084)
+* Aleris Colosseum, Stavanger (no.onk.sykehusnavnspessenter: 6087)
+* Aleris Drammen (no.onk.sykehusnavnspessenter: 0608)
+* Aleris Frogner, Oslo (no.onk.sykehusnavnspessenter: 0317)
+* Aleris Hinna park, Stavanger (no.onk.sykehusnavnspessenter: 6072)
+* Aleris Kristiansand (no.onk.sykehusnavnspessenter: 6032)
+* Aleris Marken, Bergen (no.onk.sykehusnavnspessenter: 6024)
+* Aleris medisinske senter, Strømmen (no.onk.sykehusnavnspessenter: 6013)
+* Aleris Nesttun, Bergen (no.onk.sykehusnavnspessenter: 6085)
+* Aleris Rosenborg, Trondheim (no.onk.sykehusnavnspessenter: 6086)
+* Aleris Røntgen, Oslo (no.onk.sykehusnavnspessenter: 6094)
+* Aleris Røntgen, Trondheim (no.onk.sykehusnavnspessenter: 6095)
+* Aleris Solsiden, Trondheim (no.onk.sykehusnavnspessenter: 6023)
+* Aleris sykehus og røntgen, Agder (no.onk.sykehusnavnspessenter: 6088)
+* Aleris sykehus, Tromsø (no.onk.sykehusnavnspessenter: 6033)
+* Bergen hudlegeklinikk (no.onk.sykehusnavnspessenter: 6043)
+* Best Helse AS (no.onk.sykehusnavnspessenter: 6096)
+* Betanien Hospital (no.onk.sykehusnavnspessenter: 0801)
+* Bodø gynekologiske klinikk AS (no.onk.sykehusnavnspessenter: 6068)
+* Borg Kirurgiske (no.onk.sykehusnavnspessenter: 6098)
+* Colosseum Mann (no.onk.sykehusnavnspessenter: 6074)
+* Distriktsmedisinsk senter, Finnsnes (no.onk.sykehusnavnspessenter: 6038)
+* Dr. Funks Hudklinikk (no.onk.sykehusnavnspessenter: 6046)
+* Dr. Klems klinikk (no.onk.sykehusnavnspessenter: 6021)
+* Dyrendal medisinske senter (no.onk.sykehusnavnspessenter: 6026)
+* Feiringklinikken (no.onk.sykehusnavnspessenter: 0214)
+* Haugesund Medisinske Senter (no.onk.sykehusnavnspessenter: 6053)
+* Haugesund Sanitetsforenings Revmatismesykehus (no.onk.sykehusnavnspessenter: 1102)
+* Havblikk Spesialistsenter (no.onk.sykehusnavnspessenter: 6044)
+* Heistad Legekontor (no.onk.sykehusnavnspessenter: 6002)
+* Helgeroa Legesenter (no.onk.sykehusnavnspessenter: 6030)
+* Hinnaklinikken (no.onk.sykehusnavnspessenter: 1197)
+* Hospitalet Betanien (no.onk.sykehusnavnspessenter: 1301)
+* Høeg Urologi (no.onk.sykehusnavnspessenter: 6003)
+* Kalbakkenklinikken (no.onk.sykehusnavnspessenter: 6078)
+* Kanalspesialistene A/S (no.onk.sykehusnavnspessenter: 6075)
+* Kirkeparken Spesialistpraksis (no.onk.sykehusnavnspessenter: 6004)
+* Kirurgisk klinikk (no.onk.sykehusnavnspessenter: 6069)
+* Klinikk Kramer (no.onk.sykehusnavnspessenter: 6042)
+* Klinikk Røa (no.onk.sykehusnavnspessenter: 6073)
+* Kolibri Medical (no.onk.sykehusnavnspessenter: 6031)
+* Legepraksis Dragomir Zubac AS (no.onk.sykehusnavnspessenter: 6066)
+* LHL-sykehuset Vestfold (no.onk.sykehusnavnspessenter: 6090)
+* Lysaker Hudlegekontor (no.onk.sykehusnavnspessenter: 6049)
+* Medi 3 AS (no.onk.sykehusnavnspessenter: 6007)
+* Moelv spesialistsenter (no.onk.sykehusnavnspessenter: 6008)
+* Nord-Gudbrandsdal Lokalmedisinske Senter (no.onk.sykehusnavnspessenter: 6054)
+* Nordland Urologiske Klinikk AS (no.onk.sykehusnavnspessenter: 6092)
+* Nøtterøy Legesenter (no.onk.sykehusnavnspessenter: 4710)
+* Oseberg Medisinske Klinikk (no.onk.sykehusnavnspessenter: 0708)
+* Oslo Akutten (no.onk.sykehusnavnspessenter: 0329)
+* Oslofjordklinikken (no.onk.sykehusnavnspessenter: 4709)
+* Oslogynekologene (no.onk.sykehusnavnspessenter: 6079)
+* Overnklinikken (no.onk.sykehusnavnspessenter: 6025)
+* Parsennklinikken (no.onk.sykehusnavnspessenter: 6071)
+* Privathospitalet Fana Medisinske Senter (no.onk.sykehusnavnspessenter: 6056)
+* Privatsykehuset Haugesund AS (no.onk.sykehusnavnspessenter: 6022)
+* Ringvollklinikken, Hobøl (no.onk.sykehusnavnspessenter: 6011)
+* Rune Mork Braut (no.onk.sykehusnavnspessenter: 1198)
+* RøaLegene (no.onk.sykehusnavnspessenter: 6067)
+* Sarpsborg Spesialistsenter AS (no.onk.sykehusnavnspessenter: 6036)
+* Ski Urologiske Senter (no.onk.sykehusnavnspessenter: 6010)
+* Smestadgynekologene (no.onk.sykehusnavnspessenter: 6091)
+* Spesialistsenteret AS (no.onk.sykehusnavnspessenter: 6009)
+* Stavanger Urologiske Senter (no.onk.sykehusnavnspessenter: 6041)
+* Tromsø Urologiske Spesialistsenter (no.onk.sykehusnavnspessenter: 6052)
+* Unilabs Røntgen Majorstuen (no.onk.sykehusnavnspessenter: 6035)
+* Uroklinikken, Oslo (no.onk.sykehusnavnspessenter: 6093)
+* Urologisk Klinikk (no.onk.sykehusnavnspessenter: 6055)
+* Urologiklinikken AS (no.onk.sykehusnavnspessenter: 6076)
+* Urologiklinikken i Trondheim (no.onk.sykehusnavnspessenter: 6051)
+* Urologisk kirurgisk poliklinikk (no.onk.sykehusnavnspessenter: 6001)
+* Uro-Sør AS (no.onk.sykehusnavnspessenter: 6014)
+* Volvat Bergen, Laguneparken (no.onk.sykehusnavnspessenter: 1311)
+* Volvat Bergen, Ulriksdal (no.onk.sykehusnavnspessenter: 6081)
+* Volvat Fredrikstad (no.onk.sykehusnavnspessenter: 0111)
+* Volvat Hamar (no.onk.sykehusnavnspessenter: 0412)
+* Volvat Lillehammer (no.onk.sykehusnavnspessenter: 6097)
+* Volvat Moss (no.onk.sykehusnavnspessenter: 6083)
+* Volvat Oslo, Majorstuen (no.onk.sykehusnavnspessenter: 0327)
+* Volvat Oslo, Nationaltheateret (no.onk.sykehusnavnspessenter: 6080)
+* Volvat Stokkan (no.onk.sykehusnavnspessenter: 6028)
+* Volvat Tromsø (no.onk.sykehusnavnspessenter: 6082)
+* Østfold Indremedisin AS (no.onk.sykehusnavnspessenter: 6077)
+* Østsiden Kirurgiske Praksis (no.onk.sykehusnavnspessenter: 6029)
+* Annet (no.onk.sykehusnavnspessenter: 1)
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Spesifiser annet SykehusnavnRHF* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_TEXT | Spesifiser SykehusnavnRHF
+a|
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+5+a|*Spesifiser annet SykehusnavnHF* + 
+CLUSTER: _openEHR-EHR-CLUSTER.organisation.v1_
+
+
+For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.
+|at0001| 0..1| DV_TEXT | Spesifiser SykehusnavnHF
+a|
+
+
+For eksempel: "Haukeland Sykehus", "Årstad hjemmesykepleie", "YNWA Oslo" eller "JB Smith advokater".
+|====
+== Kartleggingsspørsmål om problemer eller diagnoser (predisponerende tilstander)
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartleggingsspørsmål om problemer eller diagnoser (predisponerende tilstander)* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Predisponerende_tilstand (no.onk.kartlegging: 07)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0028| 0..1| DV_CODED_TEXT | Er det påvist tilstand hos pasient som disponerer for sarkom?
+a|
+* at0031 -> Ja 
+* at0032 -> Nei 
+* at0033 -> Ukjent 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0043| 0..1| DV_TEXT | Merknad predisponerende tilstander
+a|
+5+a|*Spesifikt problem eller diagnose* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Predisponerende tilstand
+a|
+* Neurofibromatose (ORPHA: 636)
+* Retinoblastom (ORPHA: 357027)
+* Multiple osteokondromer (MO) (ORPHA: 321)
+* Olliers sykdom (ORPHA: 296)
+* Carneys triade (ORPHA: 139411)
+* Li-Fraumenis syndrom (ORPHA: 524)
+* Maffuccis syndrom (ORPHA: 163634)
+* Pagets sykdom (ORPHA: 2801)
+* Cowdens syndrom (ORPHA: 201)
+
+
+Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Tilstede?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0025| 0..1| DV_TEXT | Merknad
+a|
+|====
+== Tidligere kreft/kreftbehandling
+== Tidligere kreft
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Tidligere kreft* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Tidligere_kreft (no.onk.kartlegging: 08)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0028| 0..1| DV_CODED_TEXT | Har pasienten hatt kreft tidligere?
+a|
+* at0031 -> Ja 
+* at0032 -> Nei 
+* at0033 -> Ukjent 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikt problem eller diagnose* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | ICD-kode
+a|
+
+
+Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Tilstede?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0040| 0..*| DV_DATE_TIME | Dato bekreftet
+|
+
+
+Dataelementet "Debut" er løst modellert for å støtte ulike måter spørsmål om tidsrom for debut av et problem eller diagnose stilles i et spørreskjema. Den spesifikke og tiltenkte semantikken defineres i et templat. For eksempel: Dato/klokkeslett brukes for dato for når diagnosen ble bekreftet. Intervall av dato/ klokkeslett brukes for å sette en tidsperiode, for eksempel mellom 1940 og 1942. Tekst brukes for spørsmålstillinger som "Rett etter en operasjon", "For en uke siden", "Opp til to uker siden", "Tre uker siden". Varighet brukes for å registrere individets alder ved debut. Intervall av varighet for å registrere tilnærmet alder ved debut.
+|at0025| 0..1| DV_TEXT | Merknad
+a|
+|====
+== Tidligere kreftbehandling
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Tidligere kreftbehandling* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.procedure_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Tidligere_kreftbehandling (no.onk.kartlegging: 01)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0028| 0..1| DV_CODED_TEXT | Har pasient vært behandlet for kreft tidligere?
+a|
+* at0031 -> Ja 
+* at0032 -> Nei 
+* at0038 -> Ukjent 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Behandlingstype
+a|
+* Medikamentell behandling (alle typer) (SNOMED-CT: 416608005)
+* Strålebehandling (intern og/eller ekstern) (SNOMED-CT: 1287742003)
+* Kirurgi (SNOMED-CT: 128303001)
+* Annen onkologisk behandling (SNOMED-CT: 74964007)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0037| 0..1| DV_DATE_TIME | Behandlingsstart
+|
+
+
+Dataelementet "Tidsangivelse" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for prosedyrer i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Prosedyrens faktiske dato og/eller klokkeslett, start- og slutttid for prosedyren, et tidsintervall for når prosedyren ble gjort, varigheten av prosedyren, individets alder på tidspunktet for prosedyren, eller hvor lenge det siden den ble gjort. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME.
+|at0037| 0..1| DV_DATE_TIME | Behandlingsslutt
+|
+
+
+Dataelementet "Tidsangivelse" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for prosedyrer i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Prosedyrens faktiske dato og/eller klokkeslett, start- og slutttid for prosedyren, et tidsintervall for når prosedyren ble gjort, varigheten av prosedyren, individets alder på tidspunktet for prosedyren, eller hvor lenge det siden den ble gjort. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME.
+|at0025| 0..1| DV_TEXT | Merknad
+a|
+|====
+== Tidsfestet fritekst
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Tidsfestet fritekst* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.progress_note.v1_
+|at0004| 0..1| DV_TEXT | Overordnet merknad kreft -og kreftbehandling
+a|
+5+a|*Semistrukturert metadata dips* + 
+CLUSTER: _openEHR-EHR-CLUSTER.semistrukturert_metadata_dips.v2_
+|at0001| 0..1| DV_CODED_TEXT | Klassifisering av informasjon
+a|
+* at0003 -> Tidligere_sykdommer 
+|====
+== Aktuell sykehistorie
+== Hovedårsak til utredning
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Hovedårsak til utredning* + 
+EVALUATION: _openEHR-EHR-EVALUATION.reason_for_encounter.v1_
+|at0004| 0..1| DV_CODED_TEXT | Klinisk kontaktårsak
+a|
+* Symptomer (no.onk.henvisningsaarsak: 2)
+* Tilfeldig funn (no.onk.henvisningsaarsak: 3)
+
+
+Koding av "Klinisk problemstilling" med en terminologi foretrekkes når mulig. Kliniske årsaker kan omfatte helseproblemer, symptomer, eller fysiske sykdomstegn. Eksempler: Helseproblemer - ønske om å slutte å røyke eller vold i hjemmet, symptomer - magesmerter eller kortpusthet, fysiske sykdomstegn - endret bevissthetsnivå. "Hovedproblemstilling" kan bli benyttet som et synonym for "Klinisk kontaktårsak" i templater.
+|====
+== Kartleggingsspørsmål om symptomer/sykdomstegn
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartleggingsspørsmål om symptomer/sykdomstegn* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.symptom_sign_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Symptom_onk (no.onk.kartlegging: 05)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene om man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. 
+For eksempel: "Pre operativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0028| 0..1| DV_CODED_TEXT | Tilstedeværelse symptomer?
+a|
+* at0031 -> Ja 
+* at0032 -> Nei 
+* at0033 -> Ukjent 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0029| 0..1| DV_DATE_TIME | Tidspunkt for symptomdebut
+|
+
+
+Dataelementet "Debut" er løst modellert for å støtte ulike måter spørsmål om tidsrom for debut av et symptom eller sykdomstegn stilles i et spørreskjema. Den spesifikke og tiltenkte semantikken defineres i et templat. 
+For eksempel: Dato/klokkeslett brukes for dato for når symptomene først ble oppdaget. Intervall av dato/ klokkeslett brukes for å sette en tidsperiode, for eksempel mellom 1940 og 1942. Tekst brukes for spørsmålstillinger som "Rett etter en operasjon", "For en uke siden", "Opp til to uker siden", "Tre uker siden". Varighet brukes for å registrere individets alder ved debut. Intervall av varighet for å registrere tilnærmet alder ved debut.
+|====
+== Anamnese
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Anamnese* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.story.v1_
+|at0004| 0..1| DV_TEXT | Anamnese/symptombilde
+a|
+|====
+== Status for primærtumor ved henvisningen
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Status for primærtumor ved henvisningen* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.procedure_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Urort_primaertumor (no.onk.kartlegging: 09)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+|at0028| 0..1| DV_CODED_TEXT | Er det utført noen invasiv prosedyre på primærtumor før det forelå mistanke om sarkom?
+a|
+* Ja (SNOMED-CT: 373066001)
+* Nei, tumor er "urørt" (SNOMED-CT: 373067005)
+* Ukjent (SNOMED-CT: 261665006)
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|at0041| 0..1| DV_TEXT | Merknad invasiv prosedyre
+a|
+5+a|*Spesifikk prosedyre* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Finnålsaspirasjonscytologi (FNAC) (SNOMED-CT: 48635004)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre #2* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Nålebiopsi (grovnålsbiopsi/pistolbiopsi) (SNOMED-CT: 129249002)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre #3* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Åpen biopsi (SNOMED-CT: 119283008)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre #4* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Pipelle (SNOMED-CT: 134279003)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre #5* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Uterin abrasio (SNOMED-CT: 1082411000202100)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre #6* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Reseksjon (SNOMED-CT: 65801008)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikk prosedyre #7* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Prosedyrenavn
+a|
+* Stansebiopsi (SNOMED-CT: 68660007)
+
+
+Koding av "Prosedyrenavn" med en terminologi foretrekkes der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Utført?
+a|
+* at0023 -> Ja 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|====
+== ECOG funksjonsstatus
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*ECOG funksjonsstatus* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.ecog.v1_
+|at0004| 1..1| DV_ORDINAL | ECOG funksjonsstatus
+a|
+* 0 - Asymptomatisk I stand til å utføre enhver normal aktivitet uten begrensning.
+* 1 - Symptomatisk, fullt oppegående Ikke i stand til fysisk krevende aktivitet, men oppegående og i stand til å utføre lett arbeid.
+* 2 - Symptomatisk, sengeliggende <50 % av våken tid Oppegående og i stand til all egenpleie, men ikke i stand til noe arbeid; oppe og i bevegelse mer enn 50% av våken tid.
+* 3 - Symptomatisk, sengeliggende > 50 % av våken tid Bare i stand til begrenset egenpleie, bundet til seng eller stol > 50 % av våken tid.
+* 4 - Helt sengeliggende Helt hjelpetrengende; klarer ikke noen egenpleie; helt bundet til seng eller stol.
+* 5 - Død Pasienten er død.
+|====
+== problem_oncology_sjk
+== Problem/diagnose (inkl TNM)_01
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Problem/diagnose (inkl TNM)_01* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose.
+|at0002| 1..1| DV_CODED_TEXT | Problem/diagnosenavn
+a|
+* Neoplastisk sykdom (SNOMED-CT: 55342001)
+
+
+Klassifiserer primærtumor som en neoplastisk sykdom for gruppering på tvers av kreftformene. 55342001 | neoplastisk sykdom |
+|at0009| 0..1| DV_TEXT | Overordnet merknad om diagnose/utbredelse ved diagnosetidspunkt
+a|
+
+
+Brukes i Sarkom med endret navn til "Merknad" 
+
+Brukes til å gi bakgrunn og kontekst, inkludert utvikling, episoder eller forverringer, fremgang og alle andre relevante detaljer, om problemet eller diagnosen.
+|at0012| 0..1| DV_CODED_TEXT | Anatomisk kategori
+a|
+* Ben (SNOMED-CT: 306721000)
+* Bløtvev (SNOMED-CT: 87784001)
+* Organer (SNOMED-CT: 113343008)
+* Retroperitoneum og andre hulrom (SNOMED-CT: 91806002)
+* Kvinnelige genitalia (SNOMED-CT: 53065001)
+* Primærtumor ukjent (SNOMED-CT: 87100004)
+
+
+Koding av navnet på den anatomiske lokaliseringen ved hjelp av en terminologi er foretrukket når dette er mulig. 
+Bruk dette dataelementet for å registrere prekoordinerte anatomiske lokaliseringer. Dersom behovene for å registrere anatomisk sted bestemmes i applikasjonen eller trenger større grad av kompleksitet som f.eks. relativ lokalisering, er det anbefalt å bruke CLUSTER.anatomical_location eller CLUSTER.relative_location innenfor SLOTet "Strukturert anatomisk lokalisering" i denne arketypen. Dette dataelementet kan ha ubegrenset antall forekomster, for å gjøre det mulig å registrere kliniske scenarier som f.eks. å beskrive et utslett som opptrer flere steder på kroppen, men der alle andre attributter er identiske. Dersom den anatomiske lokaliseringen inkluderes i feltet "Problem/diagnosenavn" via prekoordinerte koder blir dette dataelementet overflødig.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Lokasjon
+a|
+* test (no.onk.anatomi.sarkom: 1)
+|at0065| 0..*| DV_CODED_TEXT | Spesifikt sted
+a|
+* test (no.onk.anatomi_spesifikk.sarkom: 1)
+
+
+Brukes tilå øke presisjonen ved spesifisering av kroppsstedet, dersom påkrevd. For eksempel den øvre høyre kvadranten eller McBurneys punkt på bukveggen, eller interfalangealleddet på stortåen. Dersom dataelementet "Navn på kroppssted" er registrert ved hjelp av prekoordinerte termer som omfatter det spesifikke stedet er dette dataelementet overflødig. I de fleste tilfeller vil dette være ett enkelt sted på kroppen. Dataelementet åpner for flere forekomster i de sjeldne tilfellene der man trenger å angi et spesifikt anatomisk sted som omfatter to eller flere sammenhengende spesifikke steder. For eksempel for å beskrive det spesifikke stedet en svulst strekker seg over andre, tredje og fjerde ribben.
+|at0002| 0..1| DV_CODED_TEXT | Side
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+
+
+Hvis den identifiserte kroppssiden ikke har noen lateralitet, bør dette datalementet stå tomt. Hvis dataelementet "Navn på kroppsted" bruker prekoordinerte termer som inkluderer lateralitet, er dette dataelementet overflødig.
+|at0023| 0..1| DV_TEXT | Merknad
+a|
+
+
+B
+|at0078| 0..1| DV_CODED_TEXT | Årsak
+a|
+* Stråleindusert (SNOMED-CT: 1340012009)
+
+
+I Sarkom benyttes feltet kodet med mulig verdi: 
+
+SNOMED-CT::1340012009|Stråleindusert|
+
+Også kjent som 'etiologi'. Det anbefales å kode "Årsak" med en ekstern terminologi dersom det er mulig.
+|at0003| 0..1| DV_DATE_TIME | Dato diagnosebekreftelse (dato svar diagnostisk prøve foreligger)
+|
+
+
+Delvise datoer er tillatt. Dersom individet er under ett år gammel, må komplett dato eller som et minimum måned og år oppgis for å muliggjøre presise beregninger av alder, f.eks. ved bruk i beslutningsstøttesystemer. Data registrert eller importert som "alder ved tidspunkt når diagnosen stilles" bør konverteres til en dato ved hjelp av individets fødselsdato.
+5+a|*Oncology problem details dips* + 
+CLUSTER: _openEHR-EHR-CLUSTER.oncology_problem_details_dips.v1_
+
+
+Benyttes inntil videre da det det kan være at SJK prosjektet har avdekket en mangel av de eksisterende arketypene for kreftområdet. F.eks. kunne det vært aktuelt å benytte TNM arketypen. 
+|at0003| 0..1| DV_CODED_TEXT | Multifokal tumor
+a|
+* Multifokal tumor (SNOMED-CT: 399506006)
+5+a|*Klinisk grunnlag - morfologi* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+|at0003| 0..1| DV_CODED_TEXT | Morfologisk diagnose
+a|
+* test (no.onk.morfologi.sarkom: 1)
+
+
+Morfologisk diagnose settes på bakgrunn av kunnskapsbasen som er utviklet for Sarkomkreft. 
+|at0004| 0..1| DV_TEXT | Merknad morfologisk diagnose
+a|
+|at0006| 0..1| DV_DATE_TIME | Diagnosedato (dato utførelse diagnostisk undersøkelse)
+|
+
+
+For eksempel: Datoen da funnet ble gjort eller gjort tilgjengelig for klinikeren.
+|at0022| 0..1| DV_CODED_TEXT | Diagnostisk metode
+a|
+* Biopsi (SNOMED-CT: 86273004)
+* Operasjonspreparat (SNOMED-CT: 387713003)
+* Radiologi (SNOMED-CT: 363679005)
+* PET-CT (SNOMED-CT: 450436003)
+* Klinisk (SNOMED-CT: 58147004)
+
+
+BNA (18.mars 2025): Er det ikke feil terminologi id på dette feltet? Det står NORPAT, men skal vel være SNOMED-CT?
+|at0022| 0..1| DV_CODED_TEXT | Type biopsi
+a|
+* Finnålsaspirasjonscytologi (FNAC) (NORPAT: 48635004)
+* Nålebiopsi (grovnålsbiopsi/pistolbiopsi) (NORPAT: 129249002)
+* Åpen biopsi (NORPAT: 119283008)
+* Pipelle (NORPAT: 134279003)
+* Uterin abrasio (NORPAT: 1082411000202100)
+* Eksisjonsbiopsi (NORPAT: 8889005)
+* Stansebiopsi (NORPAT: 68660007)
+
+
+BNA (18.mars 2025): Er det ikke feil terminologi id på dette feltet? Det står NORPAT, men skal vel være SNOMED-CT?
+|at0001| 0..1| DV_TEXT | Merknad diagnostisk metode
+a|
+5+a|*Prøvemateriale* + 
+CLUSTER: _openEHR-EHR-CLUSTER.specimen.v1_
+
+
+For eksempel kroppsvev eller kroppsvæske.
+|at0001| 0..1| DV_TEXT | Preparatnummer
+a|
+
+
+I noen sammenhenger, som HL7 og IHE, kalt "Accession Identifier", mens et norsk synonym er "Prøvenummer". Prøvebeholdere, for eksempel vakuumglass eller vevskassetter, har egne IDer som registreres i elementet "BeholderID" i arketypen Prøvebeholder.
+5+a|*WHO histologisk grad av bensarkom* + 
+CLUSTER: _openEHR-EHR-CLUSTER.who_grade_bone_sarcoma.v1_
+|at0001| 0..1| DV_CODED_TEXT | Grad
+a|
+* at0004 -> Grad 1 (lavgradig malign) 
+* at0005 -> Grad 2 (intermediær) 
+* at0006 -> Grad 3 (høygradig malign) 
+5+a|*FNCLCC graderingssystem* + 
+CLUSTER: _openEHR-EHR-CLUSTER.fnclcc.v1_
+
+
+FNCLCC - Fédération Nationale des Centres de Lutte Contre le Cancer.
+|at0017| 0..1| DV_CODED_TEXT | Histologisk grad
+a|
+* at0022 -> GX 
+* at0018 -> Grad 1 
+* at0019 -> Grad 2 
+* at0020 -> Grad 3 
+
+
+I klinisk praksis for bløtvevssarkomer, blir 'Histologisk grad'-resultatet fra arketypen ofte gjenbrukt for å fylle ut dataelementet 'Histopatologisk gradering (G)' i arketypene TNM-klassifikasjon klinisk (CLUSTER.tnm) og TNM-klassifikasjon patologi (CLUSTER.tnm-pathological.v1).
+
+5+a|*Modifiserte NIH-kriterier for risikovurdering av GIST* + 
+CLUSTER: _openEHR-EHR-CLUSTER.gist_modified_nih.v1_
+
+
+Også kjent som Joensuu kriterier. 
+|at0004| 0..1| DV_CODED_TEXT | Risikokategori
+a|
+* at0021 -> Meget lav risiko 
+* at0022 -> Lav risiko 
+* at0023 -> Intermediær risiko 
+* at0024 -> Høy risiko 
+5+a|*Annen klassifisering sarkom* + 
+CLUSTER: _openEHR-EHR-CLUSTER.annen_klassifisering_sarkom_sjk.v1_
+|at0001| 0..1| DV_CODED_TEXT | Klassifisering
+a|
+* at0002 -> Entiteten graderes ikke 
+* at0003 -> Kan ikke graderes 
+* at0004 -> Ukjent 
+* at0005 -> Benign 
+* at0006 -> Lavgradig 
+* at0007 -> Høygradig 
+5+a|*FIGO-stadium for gynekologisk kreft* + 
+CLUSTER: _openEHR-EHR-CLUSTER.figo_staging_cancer.v1_
+
+
+FIGO - The International Federation of Gynecology and Obstetrics.
+|at0002| 0..1| DV_CODED_TEXT | FIGO-stadium
+a|
+* Stadium I (no.onk.figo: 1)
+* Stadium II (no.onk.figo: 2)
+* Stadium III (no.onk.figo: 3)
+* Stadium IV (no.onk.figo: 4)
+
+
+Koding med en FIGO-stadium som er passende for den gynekologiske kreften som klassifiseres er forventet. For eksempel: "IIA" eller "IVB".
+5+a|*Problem/diagnose detaljer* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1_
+
+
+Benyttes for å sette ICD10 koder for problemer hvor det er mer aktuelt å bruke overordnet kode på problem/diagnosenavn. 
+|at0001| 0..1| DV_CODED_TEXT | ICD-10
+a|
+|at0003| 0..1| DV_TEXT | Merknad
+a|
+5+a|*Problem/diagnose-kvalifikator* + 
+CLUSTER: _openEHR-EHR-CLUSTER.problem_qualifier.v2_
+
+
+2.mai 2025 
+Utkast til struktur for å angi progresjon og residiv knyttet til hhv. lokalt, regionalt og metastase. 
+Vi bruker feltene i arketypen for progresjon og bedringsfase for å uttrykke hhv. progresjon og residiv. 
+I tillegg legges manifisteringen (lokalt, metastase, etc.) inn i feltet forekomst. 
+
+Det ser ut til å være en struktur som følger arketypen godt. 
+|at0083| 0..1| DV_CODED_TEXT | Residiv
+a|
+* at0097 -> Residivert 
+
+
+For eksempel for å spore tilhelingen av en mellomørebetennelse.
+5+a|*Klinisk grunnlag - diameter primærtumor* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Primary tumor size (observable entity) (SNOMED-CT: 399734001)
+* Length dimension of neoplasm (observable entity) (SNOMED-CT: 263605001)
+
+
+Det anbefales å kode "Funn" med en terminologi, der det er mulig. For eksempel "Mantoux test", "AFP nivå", "Tumorstørrelse", "Genetisk test", "BRCA1 test", "Histopatologisvar", "Fysisk funn", "Funn ved operasjon", "FIGO stadium", "Symptom", "Tumorgradering", "Klinisk inntrykk". Dersom grunnlaget er tilstrekkelig identifisert i "Resultat" eller "Strukturert resultat" kan dette elementet være overflødig, og har derfor blitt satt som valgfritt.
+|at0005| 0..1| DV_QUANTITY | Største diameter
+|
+
+
+For eksempel "11 mm", "13 µg/L", "2.5 ml" or "BRCA1 positiv". "Resultat" kan bli kodet med en terminologi der det er passende.
+|at0005| 0..1| DV_QUANTITY | Diameter nr.2
+|
+
+
+For eksempel "11 mm", "13 µg/L", "2.5 ml" or "BRCA1 positiv". "Resultat" kan bli kodet med en terminologi der det er passende.
+|at0005| 0..1| DV_QUANTITY | Diameter nr.3
+|
+
+
+For eksempel "11 mm", "13 µg/L", "2.5 ml" or "BRCA1 positiv". "Resultat" kan bli kodet med en terminologi der det er passende.
+|at0022| 0..1| DV_CODED_TEXT | Utredningsmetode
+a|
+* CT (SNOMED-CT: 77477000)
+* MR (SNOMED-CT: 113091000)
+* Patologi (SNOMED-CT: 108257001)
+
+
+Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi.
+|at0023| 0..1| DV_TEXT | Kommentar
+a|
+5+a|*Klinisk grunnlag - bløtvevskomponent* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Depth of direct invasion by neoplasm (observable entity) (SNOMED-CT: 396236002)
+
+
+Det anbefales å kode "Funn" med en terminologi, der det er mulig. For eksempel "Mantoux test", "AFP nivå", "Tumorstørrelse", "Genetisk test", "BRCA1 test", "Histopatologisvar", "Fysisk funn", "Funn ved operasjon", "FIGO stadium", "Symptom", "Tumorgradering", "Klinisk inntrykk". Dersom grunnlaget er tilstrekkelig identifisert i "Resultat" eller "Strukturert resultat" kan dette elementet være overflødig, og har derfor blitt satt som valgfritt.
+|at0005| 0..1| DV_CODED_TEXT | Bløtvevskomponent
+a|
+* Intraossøs tumor (SNOMED-CT: 568051000202102)
+* Penetrasjon av cortex/periost (SNOMED-CT: 568031000202106)
+* Ukjent (SNOMED-CT: 261665006)
+* Ikke mulig å klassifisere (SNOMED-CT: 397376003)
+
+
+For eksempel "11 mm", "13 µg/L", "2.5 ml" or "BRCA1 positiv". "Resultat" kan bli kodet med en terminologi der det er passende.
+5+a|*Klinisk grunnlag - dybde* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Depth of direct invasion by neoplasm (observable entity) (SNOMED-CT: 396236002)
+
+
+Det anbefales å kode "Funn" med en terminologi, der det er mulig. For eksempel "Mantoux test", "AFP nivå", "Tumorstørrelse", "Genetisk test", "BRCA1 test", "Histopatologisvar", "Fysisk funn", "Funn ved operasjon", "FIGO stadium", "Symptom", "Tumorgradering", "Klinisk inntrykk". Dersom grunnlaget er tilstrekkelig identifisert i "Resultat" eller "Strukturert resultat" kan dette elementet være overflødig, og har derfor blitt satt som valgfritt.
+|at0005| 0..*| DV_CODED_TEXT | Resultat
+a|
+* Hud (SNOMED-CT: 409782005)
+* Subcutis (SNOMED-CT: 405903000)
+* Overfladisk fascia (SNOMED-CT: 427626002)
+* Muskulatur (SNOMED-CT: 409772009)
+* Intermuskulært (SNOMED-CT: 568041000202100)
+* Innvekst i ben (SNOMED-CT: 409773004)
+* Ukjent (SNOMED-CT: 261665006)
+
+
+For eksempel "11 mm", "13 µg/L", "2.5 ml" or "BRCA1 positiv". "Resultat" kan bli kodet med en terminologi der det er passende.
+|at0073| 0..1| DV_CODED_TEXT | Diagnostisk sikkerhet
+a|
+* at0074 -> Mistenkt 
+* at0076 -> Bekreftet 
+
+
+Hvis et alternativt verdisett er nødvendig, kan disse verdiene legges til DV_TEXT-datatypen i et templat.
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Kartleggingsspørsmål om problemer eller diagnoser
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartleggingsspørsmål om problemer eller diagnoser* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Sarkom (no.onk.kart.lokalt.sarkom: 01)
+
+
+Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: "Preoperativ screening" eller navnet på det faktiske spørreskjemaet.
+5+a|*Spesifikt problem eller diagnose* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Problem/diagnosenavn
+a|
+* Presence of metastatic discontinuous spread of primary malignant neoplasm (observable entity) (SNOMED-CT: 1730561000004100)
+
+
+Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Skipmetastase?
+a|
+* Ja (SNOMED-CT: 373066001)
+* Nei (SNOMED-CT: 373067005)
+* Ukjent (SNOMED-CT: 261665006)
+* Ikke mulig å klassifisere (SNOMED-CT: 1156316003)
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikt problem eller diagnose (2)* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Problem/diagnosenavn
+a|
+* Pathological fracture (disorder) (SNOMED-CT: 268029009)
+
+
+Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Patologisk fraktur?
+a|
+* Ja (SNMED-CT: 373066001)
+* Nei (SNMED-CT: 373067005)
+* Ukjent (SNMED-CT: 261665006)
+* Ikke mulig å klassifisere (SNMED-CT: 1156316003)
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+5+a|*Spesifikt problem eller diagnose (3)* + 
+CLUSTER: _at0022_
+|at0004| 1..1| DV_CODED_TEXT | Problem/diagnosenavn
+a|
+* Tumor invasion finding (finding) (SNOMED-CT: 373379001)
+
+
+Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.
+|at0005| 0..1| DV_CODED_TEXT | Infiltrasjon utover utgangsorgan
+a|
+* at0023 -> Ja 
+* at0024 -> Nei 
+* at0027 -> Ukjent 
+
+
+Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.
+|====
+== problem_oncology_lymph_node_sjk
+== Regional lymfeknutemetastase_10
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Regional lymfeknutemetastase_10* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose.
+|at0002| 1..1| DV_CODED_TEXT | Regional lymfeknutemetastase
+a|
+* Metastatic malignant neoplasm to lymph node (disorder) (SNOMED-CT: 94392001)
+
+
+Bruker SNOMED-CT koden 399374009 - Regional lymph node metastasis present (finding), for å klassifisisere problemet. 
+|at0079| 0..1| DV_CODED_TEXT | Variant
+a|
+* Regional (qualifier value) (SNOMED-CT: 410674003)
+
+
+Designkommentar:
+Denne blir i Brystkreft brukt til ICD10 koder for regional lymfeknutemetastase. 
+Ved andre kreftformer kan det være at denne er overflødig.
+5+a|*Utredningsmetode regionale lymfeknutemetastaser* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Metastatic malignant neoplasm to lymph node (disorder) (SNOMED-CT: 94392001)
+|at0006| 0..1| DV_DATE_TIME | Dato
+|
+
+
+Benyttes i Sarkom for dato den regionale lymfeknutemetastasen ble påvist. 
+
+For eksempel når en klinisk undersøkelse ble gjort. For laboratorieanalyser eller bildediagnostikk er dette dato/tid for når prøven eller bildet ble tatt.
+|at0022| 0..*| DV_CODED_TEXT | Metode
+a|
+* Biopsi (SNOMED-CT: 86273004)
+* Operasjonspreparat (SNOMED-CT: 387713003)
+* Radiologi (SNOMED-CT: 363679005)
+* Klinisk vurdering (SNOMED-CT: 58147004)
+
+
+Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Bryst benytter ikke anatomi på denne registreringen. Sarkom har anatomisk lokalisering. Da er det en anatomi per regionale lymfeknutemetastaser. 
+
+Dersom f.eks. bryst skal registrere anatomi vil det være aktuelt å repetere anatomisk 
+|at0001| 1..1| DV_TEXT | Lokasjon
+a|
+
+
+Angir hvor den regionale lymfeknutemetastasen ble funnet. 
+Brystkreft bruker p.t ingen anatomisk lokalisering. Den er da implisitt til aksille. 
+
+Koden for annet kroppsted er 
+74964007 - annen (qualifier value) 
+|at0002| 0..1| DV_CODED_TEXT | Side
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+|at0023| 0..1| DV_TEXT | Merknad
+a|
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== problem_oncology_metastasis_sjk
+== Regional metastase
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Regional metastase* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Detaljer om funnet av regional lymfeknutemetastase (cN). 
+Designkommentar:
+Dukker opp om M er annet enn 0 eller X
+|at0002| 1..1| DV_CODED_TEXT | Metastase
+a|
+* Metastatic malignant neoplasm (disorder) (SNOMED-CT: 128462008)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet. 
+Bruker disorder kode for metastase. 
+Setter i variant om det er regional eller fjernmetastase.
+|at0079| 0..1| DV_CODED_TEXT | Variant
+a|
+* Regional (qualifier value) (SNOMED-CT: 410674003)
+
+
+Designkommentar:
+Anatomisk lokalisering av fjernmetastasen. Lagrer direktelokalisasjon av fjernmetastasen. Hvis ikke koden ligger her må man skrive det inn i fritekst.
+Koden for disse er:
+410674003	Regional (qualifier value)
+261007001	Distant (qualifier value)
+
+5+a|*Utredning metastase* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar:
+Hvis det skal beskrives metode og dato per kroppsdel metastasen befinner seg må denne gjentas.
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Metastatic malignant neoplasm (disorder) (SNOMED-CT: 128462008)
+
+
+Designkommentar:
+Denne visis ikke i skjermbildet. 
+|at0006| 0..1| DV_DATE_TIME | Dato
+|
+
+
+Designkommentar:
+Dato for funn av metastase
+|at0022| 0..*| DV_CODED_TEXT | Metode
+a|
+* Biopsi (SNOMED-CT: 86273004)
+* Operasjonspreparat (SNOMED-CT: 387713003)
+* Radiologi (SNOMED-CT: 363679005)
+* Klinisk vurdering (SNOMED-CT: 58147004)
+
+
+Designkommentar:
+Typen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.
+Her er det tenkt at man kan ha flere utredningsmetoder. 
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Designkommentar:
+Dette clusteret må gjentas for hver kroppssted metastasen befinner seg.
+|at0001| 1..1| DV_TEXT | Lokasjon
+a|
+|at0002| 0..1| DV_CODED_TEXT | Side
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+|at0023| 0..1| DV_TEXT | Merknad
+a|
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Fjernmetastase
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Fjernmetastase* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Detaljer om funnet av regional lymfeknutemetastase (cN). 
+Designkommentar:
+Dukker opp om M er annet enn 0 eller X
+|at0002| 1..1| DV_CODED_TEXT | Metastase
+a|
+* Metastatic malignant neoplasm (disorder) (SNOMED-CT: 128462008)
+
+
+Designkommentar:
+Denne vises ikke i skjermbildet. 
+Bruker disorder kode for metastase. 
+Setter i variant om det er regional eller fjernmetastase.
+|at0079| 0..1| DV_CODED_TEXT | Variant
+a|
+* Distant (qualifier value) (SNOMED-CT: 261007001)
+
+
+Designkommentar:
+Anatomisk lokalisering av fjernmetastasen. Lagrer direktelokalisasjon av fjernmetastasen. Hvis ikke koden ligger her må man skrive det inn i fritekst.
+Koden for disse er:
+410674003	Regional (qualifier value)
+261007001	Distant (qualifier value)
+
+5+a|*Utredning metastase* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar:
+Hvis det skal beskrives metode og dato per kroppsdel metastasen befinner seg må denne gjentas.
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Metastatic malignant neoplasm (disorder) (SNOMED-CT: 128462008)
+
+
+Designkommentar:
+Denne visis ikke i skjermbildet. 
+|at0006| 0..1| DV_DATE_TIME | Dato
+|
+
+
+Designkommentar:
+Dato for funn av metastase
+|at0022| 0..*| DV_CODED_TEXT | Metode
+a|
+* Biopsi (SNOMED-CT: 86273004)
+* Operasjonspreparat (SNOMED-CT: 387713003)
+* Radiologi (SNOMED-CT: 363679005)
+* Klinisk vurdering (SNOMED-CT: 58147004)
+
+
+Designkommentar:
+Typen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.
+Her er det tenkt at man kan ha flere utredningsmetoder. 
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Designkommentar:
+Dette clusteret må gjentas for hver kroppssted metastasen befinner seg.
+|at0001| 1..1| DV_CODED_TEXT | Lokasjon
+a|
+* Lunge (SNOMED-CT: 39607008)
+* Skjelett (SNOMED-CT: 113192009)
+* Lymfeknuter (SNOMED-CT: 59441001)
+* Lever (SNOMED-CT: 10200004)
+* Bløtvev (SNOMED-CT: 87784001)
+* Retroperitoneum (SNOMED-CT: 82849001)
+* Peritoneum (SNOMED-CT: 15425007)
+* Periosteum (SNOMED-CT: 33840008)
+* Abdominale organer annet enn lever (SNOMED-CT: 699602007)
+* Hjerne (SNOMED-CT: 12738006)
+* Benmarg (SNOMED-CT: 14016003)
+* Annet (SNOMED-CT: 74964007)
+|at0002| 0..1| DV_CODED_TEXT | Side
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+|at0023| 0..1| DV_TEXT | Merknad
+a|
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Uspesifikk lungenoduli på CT der metastase ikke kan utelukkes
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Uspesifikk lungenoduli på CT der metastase ikke kan utelukkes* + 
+EVALUATION: _openEHR-EHR-EVALUATION.problem_diagnosis.v1_
+
+
+Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose.
+|at0002| 1..1| DV_CODED_TEXT | Problem/diagnosenavn
+a|
+* Uspesifikk lungenoduli på CT der metastase ikke kan utelukkes (SNOMED-CT: 445249002)
+
+
+Koding av navnet på problemet eller diagnosen med en terminologi er foretrukket hvis mulig.
+5+a|*Klinisk grunnlag* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+|at0003| 0..1| DV_CODED_TEXT | Grunnlag
+a|
+* Multiple nodules of lung (disorder)| (SNOMED-CT: 445249002)
+
+
+Det anbefales å kode "Funn" med en terminologi, der det er mulig. For eksempel "Mantoux test", "AFP nivå", "Tumorstørrelse", "Genetisk test", "BRCA1 test", "Histopatologisvar", "Fysisk funn", "Funn ved operasjon", "FIGO stadium", "Symptom", "Tumorgradering", "Klinisk inntrykk". Dersom grunnlaget er tilstrekkelig identifisert i "Resultat" eller "Strukturert resultat" kan dette elementet være overflødig, og har derfor blitt satt som valgfritt.
+|at0022| 0..1| DV_CODED_TEXT | Metode
+a|
+* Computed tomography (procedure) (SNOMED-CT: 77477000)
+
+
+Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Lung structure (body structure) (SNOMED-CT: 39607008)
+
+
+Dette dataelementet er det eneste obligatoriske dataelementet i arketypen og bør brukes som det primære dataelementet for registrering av en anatomisk lokalisering. Det er sterkt anbefalt at "Navn på kroppssted" registreres så anatomisk spesifikt som mulig. For eksempel; registrer "øvre øyelokk" heller enn "øyelokk" med "øvre" som kvalifikator; "femte ribben" heller enn "ribben" med en numerisk kvalifikator. Bruk de andre dataelementene for lateralitet, aspekt, region og anatomisk linje for å gi mer detaljer. Dette dataelementet bør kodes med en terminologi som kan assistere beslutningsstøtte dersom mulig - en passende terminologi for bruk her kunne omfatte individuelle konsepter eller lister av prekoordinerte termer. Fritekst bør kun brukes hvis det ikke finnes en passende terminologi. 
+
+Dersom navn på kroppssted er oppgitt i arketypen som denne arketypen er nøstet inn i, kan dette dataelementet være redundant. Imidlertid kan det være fornuftig å dobbeltregistrere navnet på kroppstedet for å støtte semantiske spørringer basert på denne arketypen i stedet for i arketypen den er nøstet inn i.
+|at0070| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Klinisk sammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Klinisk sammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.clinical_synopsis.v1_
+|at0002| 1..1| DV_TEXT | Sammendrag
+a|
+5+a|*Semistrukturert metadata dips* + 
+CLUSTER: _openEHR-EHR-CLUSTER.semistrukturert_metadata_dips.v2_
+|at0001| 0..1| DV_CODED_TEXT | Klassifisering av informasjon
+a|
+* at0029 -> Sammendrag 
+|====
+// Not supported rmType CODE_PHRASE
+// Not supported rmType CODE_PHRASE
+// Not supported rmType PARTY_PROXY
