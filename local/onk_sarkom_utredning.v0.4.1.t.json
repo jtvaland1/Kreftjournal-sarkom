@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "95.0.0",
+      "sem_ver" : "96.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "420617200be84ac003e0a9d877b9b2e2",
+      "MD5-CAM-1.0.1" : "0ab546fe00b743822a8ff20c2d90df4e",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -25576,36 +25576,36 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "SNOMED_CT"
+                    "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED_CT" ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "48635004",
                     "value" : "Finnålsaspirasjonscytologi (FNAC)"
                   }, {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "129249002",
                     "value" : "Nålebiopsi (grovnålsbiopsi/pistolbiopsi)"
                   }, {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "119283008",
                     "value" : "Åpen biopsi"
                   }, {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "134279003",
                     "value" : "Pipelle"
                   }, {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "1082411000202100",
                     "value" : "Uterin abrasio"
                   }, {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "8889005",
                     "value" : "Eksisjonsbiopsi"
                   }, {
-                    "terminologyId" : "SNOMED_CT",
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "68660007",
                     "value" : "Stansebiopsi"
                   } ]
