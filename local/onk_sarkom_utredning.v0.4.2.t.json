@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "100.0.0",
+      "sem_ver" : "101.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "da0aa56a43ded6334964b21b4f6c4a9e",
+      "MD5-CAM-1.0.1" : "4a92fd6242d423ee9159216eb2d79f5b",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -43045,6 +43045,10 @@
                   "@type" : "C_ATTRIBUTE",
                   "rmAttributeName" : "magnitude",
                   "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "precision",
+                  "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
@@ -43060,6 +43064,17 @@
                       "lowerIncluded" : true,
                       "upperIncluded" : false,
                       "upperUnbounded" : true,
+                      "lowerUnbounded" : false
+                    } ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "rmTypeName" : "INTEGER",
+                    "constraint" : [ {
+                      "lower" : 0,
+                      "upper" : 0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
                       "lowerUnbounded" : false
                     } ]
                   } ]
@@ -43101,6 +43116,10 @@
                   "@type" : "C_ATTRIBUTE",
                   "rmAttributeName" : "magnitude",
                   "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "precision",
+                  "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
@@ -43116,6 +43135,17 @@
                       "lowerIncluded" : true,
                       "upperIncluded" : false,
                       "upperUnbounded" : true,
+                      "lowerUnbounded" : false
+                    } ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "rmTypeName" : "INTEGER",
+                    "constraint" : [ {
+                      "lower" : 0,
+                      "upper" : 0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
                       "lowerUnbounded" : false
                     } ]
                   } ]
@@ -43157,6 +43187,10 @@
                   "@type" : "C_ATTRIBUTE",
                   "rmAttributeName" : "magnitude",
                   "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "precision",
+                  "children" : [ ]
                 } ],
                 "tuples" : [ {
                   "@type" : "C_PRIMITIVE_TUPLE",
@@ -43172,6 +43206,17 @@
                       "lowerIncluded" : true,
                       "upperIncluded" : false,
                       "upperUnbounded" : true,
+                      "lowerUnbounded" : false
+                    } ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "rmTypeName" : "INTEGER",
+                    "constraint" : [ {
+                      "lower" : 0,
+                      "upper" : 0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
                       "lowerUnbounded" : false
                     } ]
                   } ]
