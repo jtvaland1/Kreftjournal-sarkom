@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "98.0.0",
+      "sem_ver" : "99.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "40f832f24edcbf6e220a6dd9de10c1b5",
+      "MD5-CAM-1.0.1" : "c4a29ab753bea967c3075e47b1821da3",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -34311,6 +34311,15 @@
               "attributeTuples" : [ ],
               "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-003.v1",
               "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0043.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-problem_diagnosis_dips-003.v1",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -36195,6 +36204,15 @@
               "attributes" : [ ],
               "attributeTuples" : [ ],
               "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-005.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0043.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-problem_diagnosis_dips-004.v1",
               "referenceType" : "archetypeOverlay"
             } ]
           } ],
@@ -38179,6 +38197,15 @@
               "attributeTuples" : [ ],
               "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-007.v1",
               "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0043.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-problem_diagnosis_dips-005.v1",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -39036,6 +39063,15 @@
               "attributes" : [ ],
               "attributeTuples" : [ ],
               "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-012.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0039.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-011.v1",
               "referenceType" : "archetypeOverlay"
             } ]
           } ],
@@ -40493,15 +40529,6 @@
           "nodeId" : "at0023.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0024.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-011.v1",
-          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -40587,7 +40614,55 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "CF30578905EB7E3BA6A30D7C1F4C5541"
       },
-      "details" : { }
+      "details" : {
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "*To record the spatial measurements of an anatomical structure, an object or a fluid that is part of, found in or originates from the body of an individual. (en)",
+          "keywords" : [ "*specimen, laboratory, sample, pathology, size, area, weight, mass, volume, dimension, length, width, diameter, thickness, foreign object, height (en)" ],
+          "use" : "*Use to record to record the spatial measurements of an anatomical structure, an object or a fluid that is part of, found in or originates from the body of an individual. \r\n\r\nExamples include but are not limited to:\r\n- The dimensions of the lobe of a liver\r\n- An 8.0 × 10.2 × 6.5 mm tumour specimen from the intestine\r\n- A wound measuring 24 mm in length, 15 mm in width, and 4 mm in depth\r\n- 7 mL of blood in a vacuum tube\r\n- A marble that is 1 cm in diameter\r\n\r\nThis archetype is designed to be used within the context of any appropriate ENTRY or CLUSTER archetypes, to provide a common and reusable structure for recording the spatial measurements of a structure, object or fluid. It is specifically designed to be used within CLUSTER.specimen, CLUSTER.imaging_exam, CLUSTER.exam, but can be used within any relevant archetype.\r\n\r\nIn modelling situations, where the measurement requirements cannot be anticipated in advance or dedicated archetypes are not yet available, use this archetype as an agreed approach to record any or all spatial measurements or dimensions.\r\n\r\nIf the orientation of an anatomical structure or object is unclear, each dimension may be recorded using the same data element repeatedly, for example, 'length × length × length'. (en)",
+          "misuse" : "*Not to be used to record common body segment measurements that have been modelled as separate archetypes.\r\n\r\nIn modelling situations, where the measurement requirements are able to be anticipated in advance and there are common and known spatial measurements, these should be explicitly recorded as discrete data elements within the relevant archetypes. For example: 'Endometrial thickness' in the CLUSTER.imaging_exam-uterus. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere de romlige målene til en anatomisk struktur, et objekt eller en væske som er en del av, finnes i, eller stammer fra et individ.",
+          "keywords" : [ "prøve, materiale, laboratorie, patologi, volum, størrelse, lengde, bredde, tykkelse, masse, diameter, omkrets, dimensjon, areal, fremmedlegeme, høyde, dimensjon, mål" ],
+          "use" : "Brukes for å registrere de romlige målene til en anatomisk struktur, et objekt eller en væske som er en del av, finnes i, eller stammer fra et individ.\r\n\r\nEksempler inkluderer, men er ikke begrenset til:\r\n- Dimensjonene til en leverlapp\r\n- En tumorprøve fra tarmen som måler 8,0 × 10,2 × 6,5 mm\r\n- Et sår som måler 24 mm i lengde, 15 mm i bredde og 4 mm i dybde\r\n- 7 mL blod i et vakuumrør\r\n- En klinkekule med en diameter på 1 cm\r\n\r\nDenne arketypen er utformet for bruk i konteksten av enhver relevant ENTRY- eller CLUSTER-arketype, for å gi en felles og gjenbrukbar struktur for registrering av romlige mål til en struktur, et objekt eller en væske. Den er spesielt laget for bruk innen CLUSTER.specimen (Prøvemateriale), CLUSTER.imaging_exam (Bildediagnostisk undersøkelse - kroppsstruktur), CLUSTER.exam (Funn ved fysisk undersøkelse), men kan benyttes i enhver relevant arketype.\r\n\r\nVed modellering av situasjoner der målebehovene ikke kan forutses på forhånd, eller hvor dedikerte arketyper ennå ikke finnes, kan denne arketypen brukes for å registrere én eller flere romlige mål eller dimensjoner.\r\n\r\nDersom orienteringen til en anatomisk struktur eller et objekt er uklar, kan hver dimensjon registreres ved å bruke det samme dataelementet gjentatte ganger, for eksempel: \"lengde × lengde × lengde\".",
+          "misuse" : "Skal ikke brukes til å registrere vanlige kroppsdelsmålinger som allerede er modellert som egne arketyper.\r\n\r\nI modelleringssituasjoner der målebehovene kan forutses på forhånd, og det finnes vanlige og kjente romlige mål, bør disse registreres eksplisitt som separate dataelementer i relevante arketyper. For eksempel: «Endometrietykkelse» i CLUSTER.imaging_exam-uterus.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the spatial measurements of an anatomical structure, an object or a fluid that is part of, found in or originates from the body of an individual.",
+          "keywords" : [ "specimen, laboratory, sample, pathology, size, area, mass, volume, dimension, length, width, diameter, thickness, foreign object, height, measurements" ],
+          "use" : "Use to record to record the spatial measurements of an anatomical structure, an object or a fluid that is part of, found in or originates from the body of an individual. \r\n\r\nExamples include but are not limited to:\r\n- The dimensions of the lobe of a liver\r\n- An 8.0 × 10.2 × 6.5 mm tumour specimen from the intestine\r\n- A wound measuring 24 mm in length, 15 mm in width, and 4 mm in depth\r\n- 7 mL of blood in a vacuum tube\r\n- A marble that is 1 cm in diameter\r\n\r\nThis archetype is designed to be used within the context of any appropriate ENTRY or CLUSTER archetypes, to provide a common and reusable structure for recording the spatial measurements of a structure, object or fluid. It is specifically designed to be used within CLUSTER.specimen, CLUSTER.imaging_exam, CLUSTER.exam, but can be used within any relevant archetype.\r\n\r\nIn modelling situations, where the measurement requirements cannot be anticipated in advance or dedicated archetypes are not yet available, use this archetype as an agreed approach to record any or all spatial measurements or dimensions.\r\n\r\nIf the orientation of an anatomical structure or object is unclear, each dimension may be recorded using the same data element repeatedly, for example, 'length × length × length'.",
+          "misuse" : "Not to be used to record common body segment measurements that have been modelled as separate archetypes.\r\n\r\nIn modelling situations, where the measurement requirements are able to be anticipated in advance and there are common and known spatial measurements, these should be explicitly recorded as discrete data elements within the relevant archetypes. For example: 'Endometrial thickness' in the CLUSTER.imaging_exam-uterus.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.physical_dimensions.v1",
     "differential" : true,
@@ -45689,6 +45764,329 @@
       },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "a327df51-79e1-49f6-b344-e353bc5dca01",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "3838F1F72D72B92D05C24EBA84A50482"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-problem_diagnosis_dips-003.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "ICD10"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ "ICD10" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "ICD-10",
+            "description" : "Navnet på problem/diagnose"
+          }
+        }
+      },
+      "termBindings" : {
+        "ICD10" : {
+          "ac0.1" : "terminology:ICD10"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d0df25be-6391-3f33-a639-8abb7f80eaa6",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "950a0509-2e2e-4682-9cb8-3fbed7c59ddb",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "3838F1F72D72B92D05C24EBA84A50482"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-problem_diagnosis_dips-004.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "ICD10"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ "ICD10" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "ICD-10",
+            "description" : "Navnet på problem/diagnose"
+          }
+        }
+      },
+      "termBindings" : {
+        "ICD10" : {
+          "ac0.1" : "terminology:ICD10"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d0df25be-6391-3f33-a639-8abb7f80eaa6",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "229a743c-15ef-4279-815b-fdc23222bd68",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "3838F1F72D72B92D05C24EBA84A50482"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-problem_diagnosis_dips-005.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "ICD10"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ "ICD10" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "nb" : { }
+      },
+      "termBindings" : {
+        "ICD10" : {
+          "ac0.1" : "terminology:ICD10"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d0df25be-6391-3f33-a639-8abb7f80eaa6",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
