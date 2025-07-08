@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "102.0.0",
+      "sem_ver" : "103.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "12e1e79da3bbd6e6adb2dd6d3d206678",
+      "MD5-CAM-1.0.1" : "7772fd119b8339d10450f0a5756d9318",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -30044,7 +30044,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.8" ],
+                  "constraint" : [ "ac0.65" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -30147,10 +30147,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30167,10 +30167,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30187,10 +30187,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30211,35 +30211,41 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0023.1",
             "text" : "Merknad",
-            "description" : "Fritekstbeskrivelse som kan brukes for å ytterligere presisere og støtte \"Navn på kroppsted\".",
-            "comment" : "B"
+            "description" : "",
+            "comment" : "Ytterligere fritekstbeskrivelse av anatomisk lokasjon av primærtumor."
           },
           "at0065.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0065.1",
             "text" : "Spesifikt sted",
-            "description" : "",
-            "comment" : "Dersom aktuelt, kan hovedtumorens anatomiske lokasjon spesifiseres ytterligere ved å velge en eller flere verdier fra nedtrekkslisten. Lokasjoner er kodet med SNOMED-CT og NORPAT-T."
+            "description" : "Dersom aktuelt, kan primærtumorens anatomiske lokasjon spesifiseres ytterligere ved å velge en eller flere verdier fra nedtrekkslisten. Lokasjoner er kodet med SNOMED-CT og NORPAT-T.",
+            "comment" : "Verdisett for spesifisering av anatomisk lokasjon av primærtumor er utarbeidet i samarbeid med klinikere. Subsett av spesifikke lokasjoner tilgjengeliggjøres i nedtrekkslisten basert på valg i \"Lokasjon\". \n\nLokasjoner er kodet med SNOMED-CT og NORPAT-T."
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "",
-            "comment" : "Hovedtumorens anatomiske lokasjon kan angis ved å velge en verdi fra nedtrekkslisten. Lokasjoner er kodet med SNOMED-CT og NORPAT-T."
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
-            "description" : ""
+            "description" : "Primærtumorens anatomiske lokasjon kan angis ved å velge en verdi fra nedtrekkslisten. ",
+            "comment" : "Verdisett for anatomisk lokasjon av primærtumor er utarbeidet i samarbeid med klinikere. Subsett av lokasjoner tilgjengeliggjøres i nedtrekkslisten basert på valg i \"Anatomisk kategori\". \n\nVerdisett er både kodet med SNOMED-CT og NORPAT-T."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Side",
-            "description" : "Den identifiserte kroppssiden.",
-            "comment" : "Hvis den identifiserte kroppssiden ikke har noen lateralitet, bør dette datalementet stå tomt. Hvis dataelementet \"Navn på kroppsted\" bruker prekoordinerte termer som inkluderer lateralitet, er dette dataelementet overflødig."
+            "description" : "Angi kroppsside for anatomisk lokasjon dersom relevant."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Anatomisk lokalisering",
+            "description" : "",
+            "comment" : "Occurance satt (0..*) ettersom diagnose kan være multifokal (multiple primærtumorer lokalisert i ulike organer).\n\n"
+          },
+          "ac0.65" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.65",
+            "description" : ""
           }
         },
         "pt-br" : {
@@ -30255,10 +30261,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30275,10 +30281,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30295,10 +30301,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30315,10 +30321,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         },
@@ -30335,10 +30341,10 @@
             "code" : "ac0.6",
             "description" : ""
           },
-          "ac0.8" : {
+          "ac0.65" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
+            "code" : "ac0.65",
             "description" : ""
           }
         }
@@ -30378,6 +30384,291 @@
         "ac0.8" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.8",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.15",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.17" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.17",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.22" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.22",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.23" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.23",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.24" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.24",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.25",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.26" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.26",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.27" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.27",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.34",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.35" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.35",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.36" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.36",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.37" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.37",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.38" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.38",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.39",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.40",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.41",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.42",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.43",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.44",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.46" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.46",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.47" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.47",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.48" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.48",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.49" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.49",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.50" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.50",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.51" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.51",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.52" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.52",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.53" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.53",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.54" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.54",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.55" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.55",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.56" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.56",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.57" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.57",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.58" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.58",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.59" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.59",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.60" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.60",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.61" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.61",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.62" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.62",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.63" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.63",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.64" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.64",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.65" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.65",
           "members" : [ "at0003", "at0004" ]
         }
       }
@@ -32355,21 +32646,21 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
             "text" : "Problem/diagnosenavn",
-            "description" : "Identifisering av problemet eller diagnosen ved hjelp av navn.",
-            "comment" : "Klassifiserer primærtumor som en neoplastisk sykdom for gruppering på tvers av kreftformene. 55342001 | neoplastisk sykdom |"
+            "description" : "",
+            "comment" : "Klassifiserer primærtumor som en neoplastisk sykdom for gruppering på tvers av kreftformene med SNOMED-CT kode 55342001 - Neoplastic disease (disorder). Dermed dekkes både maligne, benigne og usikker benigne/maligne tumorer."
           },
           "at0009.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0009.1",
             "text" : "Overordnet merknad om diagnose/utbredelse ved diagnosetidspunkt",
-            "description" : "Fritekstbeskrivelse av problemet eller diagnosen.",
-            "comment" : "Brukes i Sarkom med endret navn til \"Merknad\" \n\nBrukes til å gi bakgrunn og kontekst, inkludert utvikling, episoder eller forverringer, fremgang og alle andre relevante detaljer, om problemet eller diagnosen."
+            "comment" : "Brukes i Sarkom med endret navn til \"Merknad\" \n\nBrukes til å gi bakgrunn og kontekst, inkludert utvikling, episoder eller forverringer, fremgang og alle andre relevante detaljer, om problemet eller diagnosen.",
+            "description" : ""
           },
           "at0078.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0078",
             "text" : "Årsak",
-            "description" : "En årsak, kjede av årsaker til, eller hendelsesforløp forut for problemet eller diagnosen.",
+            "description" : "",
             "comment" : "I Sarkom benyttes feltet kodet med mulig verdi: \n\nSNOMED-CT::1340012009|Stråleindusert|\n\nOgså kjent som 'etiologi'. Det anbefales å kode \"Årsak\" med en ekstern terminologi dersom det er mulig."
           },
           "at0079.1" : {
@@ -32384,7 +32675,7 @@
             "code" : "at0012.1",
             "text" : "Anatomisk kategori",
             "description" : "",
-            "comment" : "Angi hvilken anatomisk region hovedtumor er lokalisert i."
+            "comment" : "Verdisett for anatomiske kategorier er utarbeidet i samarbeid med klinikere."
           },
           "at0073.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -40534,7 +40825,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.30" ],
+                  "constraint" : [ "ac0.31" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -40638,10 +40929,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40658,10 +40949,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40678,10 +40969,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40721,12 +41012,12 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Side",
-            "description" : "Angi kroppsside for  fjernmetastase dersom relevant."
+            "description" : "Angi kroppsside for fjernmetastase dersom relevant."
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40743,10 +41034,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40763,10 +41054,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40783,10 +41074,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40803,10 +41094,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         },
@@ -40823,10 +41114,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.30" : {
+          "ac0.31" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.30",
+            "code" : "ac0.31",
             "description" : ""
           }
         }
@@ -40986,6 +41277,11 @@
         "ac0.30" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.30",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
           "members" : [ "at0003", "at0004" ]
         }
       }
