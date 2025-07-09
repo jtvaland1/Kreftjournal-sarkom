@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "106.0.0",
+      "sem_ver" : "107.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f8f6d2e32144cb753dc43a95842870bc",
+      "MD5-CAM-1.0.1" : "11c0b7f95ceaa974dd842a594ebad159",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -1818,7 +1818,7 @@
             "code" : "at0000.1",
             "text" : "Tidligere kreft",
             "description" : "",
-            "comment" : "Registrering om tidligere kreftdiagnose."
+            "comment" : "Registrering av tidligere kreftdiagnose."
           },
           "at0028.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -4171,7 +4171,7 @@
             "code" : "at0000.1",
             "text" : "Status for primærtumor ved henvisningen",
             "description" : "",
-            "comment" : "Registrering om invasive prosedyrer på primærtumor før det forelå mistanke om sarkom. \nListe over spesifikke invasive prosedyrer er utarbeidet i samarbeid med klinikere."
+            "comment" : "Registrering av invasive prosedyrer på primærtumor før det forelå mistanke om sarkom. \nListe over spesifikke invasive prosedyrer er utarbeidet i samarbeid med klinikere."
           },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -7400,7 +7400,7 @@
             "code" : "at0000.1",
             "text" : "Kartleggingspørsmål om sykdomshåndtering (henvisning)",
             "description" : "",
-            "comment" : "Registrering om henvisende aktør."
+            "comment" : "Registrering av henvisende aktør."
           },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -7975,7 +7975,7 @@
             "code" : "at0000.1",
             "text" : "Kartleggingsspørsmål om problemer eller diagnoser (predisponerende tilstander)",
             "description" : "",
-            "comment" : "Registrering om tilstander som predisponerer fra sarkom."
+            "comment" : "Registrering av tilstander som predisponerer fra sarkom."
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -11595,7 +11595,7 @@
             "code" : "at0000.1",
             "text" : "Kartleggingsspørsmål om problemer eller diagnoser (tumorhendelse)",
             "description" : "",
-            "comment" : "Registrering om aktuelle tumorhendelse."
+            "comment" : "Registrering av aktuelle tumorhendelse."
           },
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -12531,7 +12531,7 @@
             "code" : "at0000.1",
             "text" : "Tidligere kreftbehandling",
             "description" : "",
-            "comment" : "Registrering om tidligere kreftbehandling."
+            "comment" : "Registrering av tidligere kreftbehandling."
           },
           "at0028.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -33803,8 +33803,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Problem/diagnose (inkl TNM)_01",
-            "description" : "Diagnosen til pasienten i form av ICD10 kode samt mulighet til å registrere både cTNM og pTNM.",
-            "comment" : "Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose."
+            "description" : ""
           },
           "at0072.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -35531,6 +35530,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.107",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Kartleggingsspørsmål om problemer eller diagnoser",
             "description" : ""
           }
         },
@@ -39511,7 +39516,7 @@
             "code" : "at0000.1",
             "text" : "Regional lymfeknutemetastase_10",
             "description" : "",
-            "comment" : "Anvendes for å registrere detaljer om regionale lymfeknutemetastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per regionale lymfeknutemetastase."
+            "comment" : "Registrering av detaljer om regionale lymfeknutemetastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per regionale lymfeknutemetastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -41506,7 +41511,7 @@
             "code" : "at0000.1",
             "text" : "Regional metastase",
             "description" : "",
-            "comment" : "Anvendes for å registrere detaljer om andre regionale metastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 128462008 - Metastatic malignant neoplasm (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per annen regional metastase."
+            "comment" : "Registrering av detaljer om andre regionale metastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 128462008 - Metastatic malignant neoplasm (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per annen regional metastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -43627,7 +43632,7 @@
             "code" : "at0000.1",
             "text" : "Fjernmetastase",
             "description" : "Anvendes for å registrere detaljer om fjernmetastaser.",
-            "comment" : "Anvendes for å registrere detaljer om fjernmetastaser.\n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med 261007001 - Distant (qualifier value).\n\n\nEn instans av arketypen per fjernmetastase."
+            "comment" : "Registrering av detaljer om fjernmetastaser.\n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med 261007001 - Distant (qualifier value).\n\n\nEn instans av arketypen per fjernmetastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
