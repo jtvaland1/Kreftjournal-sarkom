@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "104.0.0",
+      "sem_ver" : "105.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "081ec7088938228f90bc156492bba142",
+      "MD5-CAM-1.0.1" : "589ff49f6394e97a99969c567dacd4e4",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -26253,7 +26253,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "nb" : { }
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "problem_oncology_lymph_node_sjk",
+            "description" : ""
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -26631,6 +26638,13 @@
             "text" : "Oncology problem details dips",
             "description" : "En indikasjon på at det finnes flere primære maligniteter og/eller multifokal tumor. ",
             "comment" : "Benyttes inntil videre da det det kan være at SJK prosjektet har avdekket en mangel av de eksisterende arketypene for kreftområdet. F.eks. kunne det vært aktuelt å benytte TNM arketypen. "
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Multifokal tumor",
+            "description" : "Angir at det forekommer flere primærtumorer med samme morfologi. ",
+            "comment" : "Angir at det forekommer flere primærtumorer med samme morfologi. "
           }
         }
       },
@@ -30074,13 +30088,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
             "text" : "Diagnostisk metode",
-            "description" : "Utredningsmetode kan angis ved å velge en verdi fra nedtrekkslisten."
+            "description" : "Angi utredningsmetode ved å velge en verdi fra nedtrekkslisten."
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Merknad diagnostisk metode",
-            "description" : "",
+            "description" : "Ytterligere fritekstbeskrivelse av utredningsmetode som ikke er omfattet av andre felt.",
             "comment" : "Ytterligere fritekstbeskrivelse av utredningsmetode"
           },
           "at0004.1" : {
@@ -30108,7 +30122,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0005.1",
             "text" : "Morfologisk diagnose",
-            "description" : "Morfologisk diagnose av primærtumor kan angis ved å velge fra nedtrekkslisten.",
+            "description" : "Angi primærtumorens morfologisk diagnose av ved å velge en verdi fra nedtrekkslisten.",
             "comment" : "Verdisett (kunnskapsbase) for morfologiske diagnoser relatert til ben- og bløtvevssvulster er utarbeidet i samarbeid med klinikere. Diagnoser er kodet med NORPAT og ICD-O, samt kategorisert som malign, benign eller usikker malign/benign."
           }
         },
@@ -30745,7 +30759,7 @@
             "code" : "at0023.1",
             "text" : "Merknad",
             "description" : "",
-            "comment" : "Ytterligere fritekstbeskrivelse av anatomisk lokasjon av primærtumor."
+            "comment" : "Ytterligere fritekstbeskrivelse av anatomisk lokasjon av primærtumor som ikke er omfattet av andre felt."
           },
           "at0065.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -36706,6 +36720,13 @@
           "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "CLUSTER",
           "occurrences" : "0..1",
@@ -36748,7 +36769,7 @@
             "code" : "at0003",
             "text" : "Grunnlag",
             "description" : "",
-            "comment" : "Settes automatisk til \"Primary tumor size (observable entity)\" og \"Length dimension of neoplasm (observable entity)\" når \"Aktuell tumorhendelse\" er hhv = \"Primærtumor (med eller uten metastase(r))\" og \"Lokalt residiv (med eller uten metastase(r))\""
+            "comment" : "Settes automatisk til \"Primary tumor size (observable entity)\" eller \"Length dimension of neoplasm (observable entity)\" når \"Aktuell tumorhendelse\" er hhv = \"Primærtumor (med eller uten metastase(r))\" eller \"Lokalt residiv (med eller uten metastase(r))\"."
           }
         },
         "de" : {
@@ -37053,6 +37074,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0005.1",
             "text" : "Bløtvevskomponent",
+            "description" : "Angi tilstedeværelse av bløtvevskomponent.",
+            "comment" : "Verdisett hentet fra KREMT."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Grunnlag",
             "description" : ""
           }
         },
@@ -37369,7 +37397,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0005",
             "text" : "Resultat",
-            "description" : ""
+            "description" : "Angi dybde av tumor.",
+            "comment" : "Verdisett hentet fra KREMT."
           }
         },
         "de" : {
@@ -37668,7 +37697,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.70" ],
+                  "constraint" : [ "ac0.72" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -37772,10 +37801,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37792,10 +37821,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37812,10 +37841,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37824,15 +37853,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Anatomisk lokalisering",
-            "description" : "Et fysisk sted på eller inne i menneskekroppen.",
-            "comment" : "Bryst benytter ikke anatomi på denne registreringen. Sarkom har anatomisk lokalisering. Da er det en anatomi per regionale lymfeknutemetastaser. \n\nDersom f.eks. bryst skal registrere anatomi vil det være aktuelt å repetere anatomisk "
+            "description" : ""
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "Angi lokasjon av regional lymfeknutemetastase.",
-            "comment" : "Lokasjon kan angis med fritekst."
+            "description" : "Angi lokasjon av regional lymfeknutemetastase."
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -37859,10 +37886,10 @@
             "text" : "Side",
             "description" : "Angi kroppsside for regional lymfeknutemetastase dersom relevant."
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37879,10 +37906,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37899,10 +37926,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37919,10 +37946,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37939,10 +37966,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         },
@@ -37959,10 +37986,10 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "ac0.70" : {
+          "ac0.72" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.70",
+            "code" : "ac0.72",
             "description" : ""
           }
         }
@@ -38323,6 +38350,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.70",
           "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.71" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.71",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.72" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.72",
+          "members" : [ "at0003", "at0004" ]
         }
       }
     },
@@ -38590,7 +38627,16 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0006.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -38685,7 +38731,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Utredningsmetode regionale lymfeknutemetastaser",
-            "description" : "Grunnlaget for et klinisk utsagn."
+            "description" : ""
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -38697,20 +38743,27 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0006",
             "text" : "Dato",
-            "description" : "Dato/tid til resultatet eller funnet.",
-            "comment" : "Benyttes i Sarkom for dato den regionale lymfeknutemetastasen ble påvist. \n\nFor eksempel når en klinisk undersøkelse ble gjort. For laboratorieanalyser eller bildediagnostikk er dette dato/tid for når prøven eller bildet ble tatt."
+            "description" : "Angi dato da regional lymfeknutemetastase ble påvist.",
+            "comment" : "For å anngi dato da regionale lymfeknutemetastase ble påvist."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003",
             "text" : "Grunnlag",
-            "description" : "Identifisering av en forekomst av et klinisk grunnlag, enten ved navn eller type, som et enkelt resultat eller en gruppe av resultater."
+            "description" : ""
           },
           "at0023.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0023.1",
             "text" : "Merknad",
-            "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
+            "description" : "Ytterligere fritekstbeskrivelse av funnet som ikke er omfattet av andre felt.",
+            "comment" : "Ytterligere fritekstbeskrivelse av funnet."
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Metode",
+            "description" : "Angi utredningsmetode for funnet ved å velge en eller flere verdier fra nedtrekkslisten."
           }
         },
         "de" : { },
@@ -39415,22 +39468,22 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Regional lymfeknutemetastase_10",
-            "description" : "Detaljer om funn av lymfeknutemetastase.",
-            "comment" : "Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose."
+            "description" : "Anvendes for å registrere detaljer om regionale lymfeknutemetastaser.",
+            "comment" : "Anvendes for å registrere detaljer om regionale lymfeknutemetastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per regionale lymfeknutemetastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Regional lymfeknutemetastase",
-            "description" : "Angir at det er regionale lymfeknutemetastaser tilstede. ",
-            "comment" : "Bruker SNOMED-CT koden 94392001 - Metastatic malignant neoplasm to lymph node (disorder), for å klassifisere problemet.\n\n\n "
+            "description" : "",
+            "comment" : "Settes automatisk til 94392001 - Metastatic malignant neoplasm to lymph node (disorder) ved registrering av \"Lokasjon\".\n\n\n "
           },
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079",
             "text" : "Variant",
             "description" : "",
-            "comment" : "Bruker SNOMED-CT koden 410674003 - Regional (qualifier value), for å klassifisere at lymfeknutemetastasen er regional. "
+            "comment" : "Settes automatisk til 410674003 - Regional (qualifier value) ved registrering av \"Lokasjon\"."
           },
           "at0069.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -41411,15 +41464,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Regional metastase",
-            "description" : "Detaljer om funnet av fjernmetastase(r) (cM).",
-            "comment" : "Detaljer om funnet av regional lymfeknutemetastase (cN). \nDesignkommentar:\nDukker opp om M er annet enn 0 eller X"
+            "description" : "Brukes for å registreres andre regionale metastaser."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Metastase",
-            "description" : "Funn av fjernmetastaser.",
-            "comment" : "Designkommentar:\nDenne vises ikke i skjermbildet. \nBruker disorder kode for metastase. \nSetter i variant om det er regional eller fjernmetastase."
+            "description" : ""
           },
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
