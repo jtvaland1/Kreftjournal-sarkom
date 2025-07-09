@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "105.0.0",
+      "sem_ver" : "106.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "589ff49f6394e97a99969c567dacd4e4",
+      "MD5-CAM-1.0.1" : "f8f6d2e32144cb753dc43a95842870bc",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -6098,6 +6098,26 @@
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "protocol",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
@@ -6133,7 +6153,21 @@
         "es-ar" : { },
         "pt-br" : { },
         "zh-cn" : { },
-        "nb" : { },
+        "nb" : {
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Sammendrag",
+            "description" : "",
+            "comment" : "Sammendrag i fritekstformat basert på registreringer i skjema."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Sammendrag",
+            "description" : ""
+          }
+        },
         "sv" : { }
       },
       "termBindings" : { },
@@ -26362,7 +26396,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "nb" : { }
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "problem_oncology_metastasis_sjk",
+            "description" : ""
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -38744,13 +38785,14 @@
             "code" : "at0006",
             "text" : "Dato",
             "description" : "Angi dato da regional lymfeknutemetastase ble påvist.",
-            "comment" : "For å anngi dato da regionale lymfeknutemetastase ble påvist."
+            "comment" : "For å angi dato da regionale lymfeknutemetastase ble påvist."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003",
             "text" : "Grunnlag",
-            "description" : ""
+            "description" : "",
+            "comment" : "Settes automatisk til 94392001 - Metastatic malignant neoplasm to lymph node (disorder) ved registrering av \"Lokasjon\".\n"
           },
           "at0023.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -39468,7 +39510,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Regional lymfeknutemetastase_10",
-            "description" : "Anvendes for å registrere detaljer om regionale lymfeknutemetastaser.",
+            "description" : "",
             "comment" : "Anvendes for å registrere detaljer om regionale lymfeknutemetastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per regionale lymfeknutemetastase."
           },
           "at0002.1" : {
@@ -40084,14 +40126,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
             "text" : "Anatomisk lokalisering",
-            "description" : "Et fysisk sted på eller inne i menneskekroppen.",
-            "comment" : "Designkommentar:\nDette clusteret må gjentas for hver kroppssted metastasen befinner seg."
+            "description" : ""
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen."
+            "description" : "Angi lokasjon av annen regional metastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -40759,28 +40800,28 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022",
             "text" : "Metode",
-            "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.",
-            "comment" : "Designkommentar:\nTypen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.\nHer er det tenkt at man kan ha flere utredningsmetoder. "
+            "description" : "Angi utredningsmetode for funnet ved å velge en eller flere verdier fra nedtrekkslisten."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003",
             "text" : "Grunnlag",
-            "description" : "Funn av fjernmetastase(r)\n",
-            "comment" : "Designkommentar:\nDenne visis ikke i skjermbildet. "
+            "description" : "",
+            "comment" : "Settes automatisk til 128462008 - Metastatic malignant neoplasm (disorder) ved registrering av \"Lokasjon\"."
           },
           "at0006.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0006",
             "text" : "Dato",
-            "description" : "Dato/tid til resultatet eller funnet.",
-            "comment" : "Designkommentar:\nDato for funn av metastase"
+            "description" : "Angi dato da annen regional metastase ble påvist.",
+            "comment" : "For å angi dato da annen regional metastase ble påvist."
           },
           "at0023.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0023.1",
             "text" : "Merknad",
-            "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
+            "description" : "Ytterligere fritekstbeskrivelse av funnet som ikke er omfattet av andre felt.",
+            "comment" : "Ytterligere fritekstbeskrivelse av funnet."
           }
         },
         "de" : {
@@ -41464,20 +41505,22 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Regional metastase",
-            "description" : "Brukes for å registreres andre regionale metastaser."
+            "description" : "",
+            "comment" : "Anvendes for å registrere detaljer om andre regionale metastaser. \n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 128462008 - Metastatic malignant neoplasm (disorder) og \"Variant\" er kodet med SNOMED-CT kode 410674003 - Regional (qualifier value).\n\nEn instans av arketypen per annen regional metastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Metastase",
-            "description" : ""
+            "description" : "",
+            "comment" : "Settes automatisk til 128462008 - Metastatic malignant neoplasm (disorder) ved registrering av \"Lokasjon\"."
           },
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079",
             "text" : "Variant",
-            "description" : "Anatomisk lokalisering av fjernmetastasen.",
-            "comment" : "Designkommentar:\nAnatomisk lokalisering av fjernmetastasen. Lagrer direktelokalisasjon av fjernmetastasen. Hvis ikke koden ligger her må man skrive det inn i fritekst.\nKoden for disse er:\n410674003\tRegional (qualifier value)\n261007001\tDistant (qualifier value)\n"
+            "description" : "",
+            "comment" : "Settes automatisk til 410674003 - Regional (qualifier value) ved registrering av \"Lokasjon\"."
           },
           "at0012.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -42204,14 +42247,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
             "text" : "Anatomisk lokalisering",
-            "description" : "Et fysisk sted på eller inne i menneskekroppen.",
-            "comment" : "Designkommentar:\nDette clusteret må gjentas for hver kroppssted metastasen befinner seg."
+            "description" : ""
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen."
+            "description" : "Angi lokasjon av fjernmetastase ved å velge en verdi fra nedtrekkslisten."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -42879,28 +42921,28 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022",
             "text" : "Metode",
-            "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.",
-            "comment" : "Designkommentar:\nTypen undersøkelse eller utredning som er utført for å komme fram til funn av fjernmetastasen.\nHer er det tenkt at man kan ha flere utredningsmetoder. "
+            "description" : "Angi utredningsmetode for funnet ved å velge en eller flere verdier fra nedtrekkslisten."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003",
             "text" : "Grunnlag",
-            "description" : "Funn av fjernmetastase(r)\n",
-            "comment" : "Designkommentar:\nDenne visis ikke i skjermbildet. "
+            "description" : "\n",
+            "comment" : "Settes automatisk til 128462008 - Metastatic malignant neoplasm (disorder) ved registrering av \"Lokasjon\"."
           },
           "at0006.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0006",
             "text" : "Dato",
-            "description" : "Dato/tid til resultatet eller funnet.",
-            "comment" : "Designkommentar:\nDato for funn av metastase"
+            "description" : "Angi dato da regional lymfeknutemetastase ble påvist.",
+            "comment" : "For å angi dato da regionale lymfeknutemetastase ble påvist."
           },
           "at0023.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0023.1",
             "text" : "Merknad",
-            "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
+            "description" : "Ytterligere fritekstbeskrivelse av funnet som ikke er omfattet av andre felt.",
+            "comment" : "Ytterligere fritekstbeskrivelse av funnet."
           }
         },
         "de" : {
@@ -43584,22 +43626,22 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Fjernmetastase",
-            "description" : "Detaljer om funnet av fjernmetastase(r) (cM).",
-            "comment" : "Detaljer om funnet av regional lymfeknutemetastase (cN). \nDesignkommentar:\nDukker opp om M er annet enn 0 eller X"
+            "description" : "Anvendes for å registrere detaljer om fjernmetastaser.",
+            "comment" : "Anvendes for å registrere detaljer om fjernmetastaser.\n\n\"Problem/diagnosenavn\" er kodet med SNOMED-CT kode 94392001 - Metastatic malignant neoplasm to lymph node (disorder) og \"Variant\" er kodet med 261007001 - Distant (qualifier value).\n\n\nEn instans av arketypen per fjernmetastase."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Metastase",
-            "description" : "Funn av fjernmetastaser.",
-            "comment" : "Designkommentar:\nDenne vises ikke i skjermbildet. \nBruker disorder kode for metastase. \nSetter i variant om det er regional eller fjernmetastase."
+            "description" : "",
+            "comment" : "Settes automatisk til 128462008 - Metastatic malignant neoplasm (disorder) ved registrering av \"Lokasjon\"."
           },
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079",
             "text" : "Variant",
-            "description" : "Anatomisk lokalisering av fjernmetastasen.",
-            "comment" : "Designkommentar:\nAnatomisk lokalisering av fjernmetastasen. Lagrer direktelokalisasjon av fjernmetastasen. Hvis ikke koden ligger her må man skrive det inn i fritekst.\nKoden for disse er:\n410674003\tRegional (qualifier value)\n261007001\tDistant (qualifier value)\n"
+            "description" : "",
+            "comment" : "Settes automatisk til 261007001 - Distant (qualifier value) ved registrering av \"Lokasjon\".\n\n\n"
           },
           "at0012.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -44439,8 +44481,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Uspesifikk lungenoduli på CT der metastase ikke kan utelukkes",
-            "description" : "Detaljer om én identifisert helsetilstand, skade, funksjonshemming eller annet forhold som påvirker et individs fysiske, mentale og/eller sosiale velvære.",
-            "comment" : "Det er i praksis ikke lett å oppnå et klart skille mellom et problem og en diagnose. I klinisk dokumentasjon med denne arketypen ses problem og diagnose som et kontinuum, med økende krav til detaljer og støttende evidens for å underbygge en diagnose."
+            "description" : ""
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -45200,6 +45241,19 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Anatomisk lokalisering",
+            "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Navn på kroppssted",
+            "description" : "",
+            "comment" : "Settes automatisk til 39607008 - Lung structure (body structure) dersom bruker huker av for funnet."
           }
         },
         "pt-br" : {
@@ -45810,7 +45864,22 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : { },
-        "nb" : { },
+        "nb" : {
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Grunnlag",
+            "description" : "",
+            "comment" : "Settes automatisk til 39607008 - Lung structure (body structure) dersom bruker huker av for funnet."
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Metode",
+            "description" : "",
+            "comment" : "Settes automatisk til 77477000 - Computed tomography (procedure) dersom bruker huker av for funnet."
+          }
+        },
         "de" : { },
         "sv" : { }
       },
@@ -50988,8 +51057,8 @@
         "nb" : {
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Diagnosenavn",
+            "code" : "at0001.1",
+            "text" : "ICD-10",
             "description" : "Angi ICD-10 kode ved å søke i ICD-10 dersom relevant."
           }
         }
