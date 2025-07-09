@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "107.0.0",
+      "sem_ver" : "107.0.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "11c0b7f95ceaa974dd842a594ebad159",
+      "MD5-CAM-1.0.1" : "a3b63c929bc04ffaa5c2fae8c7afc968",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -4171,7 +4171,7 @@
             "code" : "at0000.1",
             "text" : "Status for primærtumor ved henvisningen",
             "description" : "",
-            "comment" : "Registrering av invasive prosedyrer på primærtumor før det forelå mistanke om sarkom. \nListe over spesifikke invasive prosedyrer er utarbeidet i samarbeid med klinikere."
+            "comment" : "Registrering av invasive prosedyrer på primærtumor før det forelå mistanke om sarkom. Liste over prosedyrer er utarbeidet i samarbeid med klinikere."
           },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -6154,13 +6154,6 @@
         "pt-br" : { },
         "zh-cn" : { },
         "nb" : {
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Sammendrag",
-            "description" : "",
-            "comment" : "Sammendrag i fritekstformat basert på registreringer i skjema."
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
@@ -10640,8 +10633,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Spesifiser annet SykehusnavnHF",
-            "description" : "En entitet som består av ett eller flere mennesker med et bestemt formål.",
-            "comment" : "For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte."
+            "description" : ""
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -29595,12 +29587,6 @@
           }
         },
         "nb" : {
-          "at0017" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0017",
-            "text" : "Histologisk grad",
-            "description" : "Vurdering av histologisk grad basert på total skår i FNCLCC graderingssystem."
-          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
@@ -35537,6 +35523,12 @@
             "code" : "at0000",
             "text" : "Kartleggingsspørsmål om problemer eller diagnoser",
             "description" : ""
+          },
+          "at0034.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034",
+            "text" : "Kartleggingsformål",
+            "description" : ""
           }
         },
         "de" : {
@@ -37905,7 +37897,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "Angi lokasjon av regional lymfeknutemetastase."
+            "description" : "Angi lokasjon av regional lymfeknutemetastase i fritekst.",
+            "comment" : "Lokasjon av regional lymfeknutemetastase angis i fritekst."
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -38673,16 +38666,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0006.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -40137,7 +40121,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "Angi lokasjon av annen regional metastase."
+            "description" : "Angi lokasjon av annen regional metastase i fritekst.",
+            "comment" : "Lokasjon av annen regional metastase angis i fritekst."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -40792,7 +40777,6 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Utredning metastase",
-            "comment" : "Designkommentar:\nHvis det skal beskrives metode og dato per kroppsdel metastasen befinner seg må denne gjentas.",
             "description" : ""
           },
           "at0001.1" : {
@@ -42258,7 +42242,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Lokasjon",
-            "description" : "Angi lokasjon av fjernmetastase ved å velge en verdi fra nedtrekkslisten."
+            "description" : "Angi lokasjon av fjernmetastase ved å velge en verdi fra nedtrekkslisten.",
+            "comment" : "Verdisett utarbeidet i samarbeid med klinikere."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -42913,7 +42898,6 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Utredning metastase",
-            "comment" : "Designkommentar:\nHvis det skal beskrives metode og dato per kroppsdel metastasen befinner seg må denne gjentas.",
             "description" : ""
           },
           "at0001.1" : {
@@ -44486,7 +44470,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Uspesifikk lungenoduli på CT der metastase ikke kan utelukkes",
-            "description" : ""
+            "description" : "",
+            "comment" : "Registrering av tilstedeværelse av uspesifikke lungenoduli på CT der metastase ikke kan utelukkes.\n\nAnatomisk lokasjon er kodet med SNOMED-CT kodd Settes automatisk til 39607008 - Lung structure (body structure) og Metode er kodet med 77477000 - Computed tomography (procedure).\n"
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -44504,7 +44489,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
             "text" : "Problem/diagnosenavn",
-            "description" : ""
+            "description" : "",
+            "comment" : "445249002 = Multiple nodules of lung (disorder).\n\n"
           }
         },
         "sv" : {
@@ -45875,7 +45861,7 @@
             "code" : "at0003",
             "text" : "Grunnlag",
             "description" : "",
-            "comment" : "Settes automatisk til 39607008 - Lung structure (body structure) dersom bruker huker av for funnet."
+            "comment" : "Settes automatisk til 445249002 - Multiple nodules of lung (disorder) dersom bruker huker av for funnet."
           },
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
