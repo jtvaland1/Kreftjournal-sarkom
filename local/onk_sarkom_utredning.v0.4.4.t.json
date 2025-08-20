@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "107.0.1",
+      "sem_ver" : "108.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "134be0b81f02ebdd8429e9e27fdd1841",
+      "MD5-CAM-1.0.1" : "e7e6b2182f26d150a89c5fff8ceafb81",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -33596,7 +33596,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
+              "occurrences" : "0..0",
               "nodeId" : "at0043.1",
               "attributes" : [ ],
               "attributeTuples" : [ ],
@@ -33605,7 +33605,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
+              "occurrences" : "0..0",
               "nodeId" : "at0043.1",
               "attributes" : [ ],
               "attributeTuples" : [ ],
@@ -36518,10 +36518,6 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "399734001",
-                    "value" : "Primary tumor size (observable entity)"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
                     "code" : "263605001",
                     "value" : "Length dimension of neoplasm (observable entity)"
                   } ]
@@ -37105,7 +37101,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag - bløtvevskomponent",
+            "text" : "Klinisk grunnlag - bløtvevskomponent (bensarkom)",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
           },
           "at0005.1" : {
@@ -37428,7 +37424,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag - dybde",
+            "text" : "Klinisk grunnlag - dybde (bløtvevssarkom)",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
           },
           "at0005.1" : {
