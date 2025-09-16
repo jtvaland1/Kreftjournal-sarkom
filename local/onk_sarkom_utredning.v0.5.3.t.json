@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "66f6a113b32bfb87117297406eb76e92",
+      "MD5-CAM-1.0.1" : "20969fcb6c782b4d0659c5510826a9c2",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -51252,8 +51252,21 @@
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.2" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ ]
                         } ]
                       } ],
@@ -51414,6 +51427,12 @@
             "code" : "at0043.1",
             "text" : "Overordnet merknad biomarkører",
             "description" : "Narrative description about the history of any investigations relevant for the screening purpose."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "de" : {
@@ -51436,6 +51455,12 @@
             "code" : "at0043.1",
             "text" : "Overordnet merknad biomarkører",
             "description" : "Beschreibung über die Geschichte der Durchführung von Untersuchungen, die für das Screening relevant sind."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "nb" : {
@@ -51458,6 +51483,12 @@
             "code" : "at0043.1",
             "text" : "Overordnet merknad biomarkører",
             "description" : "Fritekstbeskrivelse om undersøkelser som er tidligere utført og som er innenfor kartleggingsformålet."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "es" : {
@@ -51480,6 +51511,12 @@
             "code" : "at0043.1",
             "text" : "Overordnet merknad biomarkører",
             "description" : "Descripción narrativa sobre la historia de cualquier investigación relevante para el propósito del screening."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         },
         "ca" : {
@@ -51502,12 +51539,29 @@
             "code" : "at0043.1",
             "text" : "Overordnet merknad biomarkører",
             "description" : "Descripció narrativa sobre la història de qualsevol investigació rellevant per al propòsit de l'screening."
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0028", "at0029", "at0030", "at0045" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0028", "at0029", "at0030" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "4d25329a-645b-4c04-9a2a-fc22c6aa33d1",
