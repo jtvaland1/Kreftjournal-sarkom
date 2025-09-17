@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "a679005658160f5ba08f58b00b730ddd",
+      "MD5-CAM-1.0.1" : "a16424fac6ea96507acb0f53041e0143",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -30339,7 +30339,7 @@
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
-            "text" : "Merknad",
+            "text" : "Merknad ICD-10",
             "description" : ""
           },
           "at0001.1" : {
@@ -37438,8 +37438,8 @@
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Resultat",
+            "code" : "at0005.1",
+            "text" : "Dybde",
             "description" : "Angi dybde av tumor.",
             "comment" : "Verdisett hentet fra KREMT."
           }
