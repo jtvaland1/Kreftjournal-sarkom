@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "1576cfeaba9da93bfe2564f21c7a7be7",
+      "MD5-CAM-1.0.1" : "197a6aa6f4b65289314e90a0b457909d",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -59661,6 +59661,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0029.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -59788,6 +59789,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0007.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -60107,7 +60109,7 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
+          "occurrences" : "0..0",
           "nodeId" : "at0013.1",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -60815,379 +60817,7 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0024.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "HGNC"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "HGNC" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:24046",
-                    "value" : "13q14.2 (ARL11)"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:583",
-                    "value" : "APC"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:795",
-                    "value" : "ATM"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:950",
-                    "value" : "BAP1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:952",
-                    "value" : "BARD1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1076",
-                    "value" : "BMPR1A"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1097",
-                    "value" : "BRAF"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1100",
-                    "value" : "BRCA1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1101",
-                    "value" : "BRCA2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:20473",
-                    "value" : "BRIP1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:16783",
-                    "value" : "CDC73"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1748",
-                    "value" : "CDH1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1773",
-                    "value" : "CDK4"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1785",
-                    "value" : "CDKN1B"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1787\"",
-                    "value" : "CDKN2A"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:16627",
-                    "value" : "CHEK2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:2509",
-                    "value" : "CTNNA1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:2514",
-                    "value" : "CTNNB1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:17098",
-                    "value" : "DICER1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:3236",
-                    "value" : "EGFR"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11529",
-                    "value" : "EPCAM"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:3700",
-                    "value" : "FH"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:27310",
-                    "value" : "FLCN(Birt-Hogg-Dubé syndrom)"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:1092",
-                    "value" : "FOXL2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:2001",
-                    "value" : "GREM1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:4764",
-                    "value" : "H3-3A"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:20503",
-                    "value" : "H3C14"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:4776",
-                    "value" : "H3C2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:4768",
-                    "value" : "H3C3"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:5112",
-                    "value" : "HOXB13"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11582",
-                    "value" : "HRD status"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:5382",
-                    "value" : "IDH1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:5383",
-                    "value" : "IDH2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:6342",
-                    "value" : "KIT"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:6407",
-                    "value" : "KRAS"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:6913",
-                    "value" : "MAX"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7010",
-                    "value" : "MEN1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7029",
-                    "value" : "MET"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7059",
-                    "value" : "MGMT-metylering"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7105",
-                    "value" : "MITF"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7127",
-                    "value" : "MLH1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7325",
-                    "value" : "MSH2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7326",
-                    "value" : "MSH3"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7329",
-                    "value" : "MSH6"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7527",
-                    "value" : "MUTYH"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7652",
-                    "value" : "NBN"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7765",
-                    "value" : "NF1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:7989",
-                    "value" : "NRAS"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:8028",
-                    "value" : "NTHL1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:8031",
-                    "value" : "NTRK1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:8032",
-                    "value" : "NTRK2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:8033",
-                    "value" : "NTRK3"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:26144",
-                    "value" : "PALB2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:8803",
-                    "value" : "PDGFRA"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9122",
-                    "value" : "PMS2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9175",
-                    "value" : "POLD1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9177",
-                    "value" : "POLE"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:17284",
-                    "value" : "POT1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9388",
-                    "value" : "PRKAR1A"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9475",
-                    "value" : "PRSS1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9588",
-                    "value" : "PTEN"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9820",
-                    "value" : "RAD51C"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9823",
-                    "value" : "RAD51D"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9884",
-                    "value" : "RB1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:9967",
-                    "value" : "RET"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:18505",
-                    "value" : "RNF43"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:10680",
-                    "value" : "SDHA"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:26034",
-                    "value" : "SDHAF2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:10681",
-                    "value" : "SDHB"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:10682",
-                    "value" : "SDHC"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:10683",
-                    "value" : "SDHD"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:6769",
-                    "value" : "SMAD3"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:6770",
-                    "value" : "SMAD4"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11100",
-                    "value" : "SMARCA4"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11103",
-                    "value" : "SMARCB1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11244",
-                    "value" : "SPINK1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11389",
-                    "value" : "STK11"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11730",
-                    "value" : "TERT"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:26038",
-                    "value" : "TMEM127"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:11998",
-                    "value" : "TP53"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:12362",
-                    "value" : "TSC1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:12363",
-                    "value" : "TSC2"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:12687",
-                    "value" : "VHL"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:12796",
-                    "value" : "WT1"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:3467",
-                    "value" : "ER (østrogenreseptor)"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:8910",
-                    "value" : "PR (progesteron reseptor)"
-                  }, {
-                    "terminologyId" : "HGNC",
-                    "code" : "HGNC:17635",
-                    "value" : "PD-L1 (CD274)"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -63422,7 +63052,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..*",
                       "nodeId" : "at0065.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -63685,7 +63315,7 @@
           "at0101.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0101.2",
-            "text" : "Merknad molekylær patologi og cytogenetikk",
+            "text" : "Merknad",
             "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt."
           },
           "at0101.3" : {
@@ -68114,7 +67744,7 @@
         "children" : [ {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "OBSERVATION",
-          "occurrences" : "1..1",
+          "occurrences" : "0..0",
           "nodeId" : "at0.1",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -68123,7 +67753,7 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..*",
+          "occurrences" : "0..0",
           "nodeId" : "at0.2",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -68132,7 +67762,7 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..*",
+          "occurrences" : "0..0",
           "nodeId" : "at0.3",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -68150,7 +67780,7 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..*",
+          "occurrences" : "0..0",
           "nodeId" : "at0.5",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -68200,7 +67830,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Biomarkører (gentest, tumormarkører, patologi)",
+            "text" : "Biomarkører (molekylær patologi og cytogenetikk)",
             "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
           }
         },
