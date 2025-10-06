@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b27f07eef8f7664b9d5d7751fb7849df",
+      "MD5-CAM-1.0.1" : "641dff39bf4b5920e1f32f9b996552a7",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -60161,6 +60161,12 @@
             "text" : "Lesjon/funn navn/ID",
             "description" : "Et navn eller etikett som beskriver prøvematerialet.",
             "comment" : "Vanligvis kun relevant for anatomiske patologiprøver. For eksempel: 'Sigmoidreseksjon med et stykke blærevegg' eller 'Aggregat av flere hudbiopsifragmenter'"
+          },
+          "at0015.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Dato/tid for prøvetaking",
+            "description" : "Angi dato da prøve ble tatt."
           }
         },
         "de" : {
@@ -61108,7 +61114,25 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : { },
-        "nb" : { },
+        "nb" : {
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analysenavn",
+            "description" : "Angi navn av biomarkør i fritekst.",
+            "comment" : "Navn av biomarkør angis i fritekst.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyseresultat",
+            "description" : "",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          }
+        },
         "pt-br" : { },
         "de" : { },
         "nl" : { },
@@ -63320,7 +63344,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0101.2",
             "text" : "Merknad",
-            "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt."
+            "description" : "",
+            "comment" : "Ytterligere fritekstbeskrivelse om funn."
           },
           "at0101.3" : {
             "@type" : "ARCHETYPE_TERM",
@@ -63332,8 +63357,21 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0063.1",
             "text" : "Rekvisisjonsnummer",
-            "description" : "Bestillingens/rekvisisjonens lokale identifikator/referansenummer tildelt av tjenesteyter/mottaker, som regel av LIMS.",
-            "comment" : "Når Laboratorieinformasjonssystemet (LIMS) tildeler en identifikator, åpnes det for sporing av fremdriften/prosessforløpet på bestillingen av undersøkelsen/rekvisisjonen og for å koble undersøkelsesresultatet til rekvisisjonen/bestillingen. Som regel tilsvarer dette HL7 \"Filler Order Identifier\".\r\n\r\nDenne identifikatoren kalles også ofte \"rekvisisjonsnummer\" eller \"remissenummer\"."
+            "description" : "",
+            "comment" : "Rekvisisjonsnummer angis i fritekst. "
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Uspesifisert hendelse",
+            "description" : ""
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Undersøkelsesnavn",
+            "description" : "",
+            "comment" : "Settes automatisk til 405824009 - Genetic test (procedure) ved registrering av \"Dato/tid for prøvetaking\"."
           }
         },
         "zh-cn" : {
@@ -67835,7 +67873,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Biomarkører (molekylær patologi og cytogenetikk)",
-            "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
+            "description" : ""
           }
         },
         "pt-br" : {
