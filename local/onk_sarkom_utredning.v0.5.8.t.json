@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e74ae8a0bf08c43548a8ee4b29591d14",
+      "MD5-CAM-1.0.1" : "f4f128af0a512dddc2a5620a58cd9cbd",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -36750,6 +36750,10 @@
                     "value" : "MR"
                   }, {
                     "terminologyId" : "SNOMED-CT",
+                    "code" : "16310003",
+                    "value" : "Ultralyd"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "108257001",
                     "value" : "Patologi"
                   } ]
@@ -42856,6 +42860,10 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "363679005",
                     "value" : "Radiologi"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "450436003",
+                    "value" : "PET-CT"
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "58147004",
