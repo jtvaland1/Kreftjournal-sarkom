@@ -48,6 +48,7 @@
           },
           "codeString" : "nb"
         },
+        "purpose" : "Endringer i templat er ikke brytende for skript sammendrag:\n- Lagt til UL i verdisett for målemetode diameter tumor\n- Lagt til PET-CT i utredningsmetoder for fjernmetastaser\n\nFølgende må gjøres i neste versjon (avventes ettersom det bryter med skript):\n- Endre elementnavn for biopsityper til \"Typer biopsi\"\n- Bytte ut cluster anatomisk lokalisasjon til nyere versjon, samt legge til \"Angis kun for parorgan\" i element for kroppsside\n- Modellere inn mulighet for å huke av PET-CT ved primærdiagnose\n",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
