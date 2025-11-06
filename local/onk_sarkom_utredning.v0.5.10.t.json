@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "31052fa778e96bd8b5b857bad9f3c692",
+      "MD5-CAM-1.0.1" : "a73840fdb5afc1bf01597773ccc0a471",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -48,7 +48,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "Endringer (bryter med skript sammendrag):\n- Endre elementnavn for biopsityper til \"Type biopsi\"\n- Bytte ut cluster anatomisk lokalisasjon til nyere versjon, samt legge til \"Angis kun for parorgan\" i element for kroppsside\n- Modellere inn mulighet for å huke av PET-CT ved primærdiagnose\n",
+        "purpose" : "Endringer (bryter med skript sammendrag):\n- Endre elementnavn for biopsityper til \"Type biopsi\"\n- Bytte ut cluster anatomisk lokalisasjon til nyere versjon, samt legge til \"Angis kun for parorgan\" i element for kroppsside\n- Modellere inn mulighet for å huke av PET-CT ved primærdiagnose\n\nQA-møte:\n- Fjernet \"Tilstede\"/\"Utført\"-elementer\n- Byttet datoer ang diagnose (slik at det samstemmer med eksportskjema)\n",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
