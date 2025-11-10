@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "82adf1d3dc0d07e5834f7f333b76f037",
+      "MD5-CAM-1.0.1" : "4413aacc1102e13951e7e8922799163e",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -30442,41 +30442,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
-          "nodeId" : "at0022.3",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "450436003",
-                    "value" : "PET-CT gjennomført"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0022.2",
           "attributes" : [ {
@@ -30537,7 +30502,35 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "450436003",
+                    "value" : "PET-CT gjennomført"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -30606,13 +30599,6 @@
             "text" : "Method (2)",
             "description" : "Type of examination or investigation used to identify the evidence.",
             "comment" : "Consider coding 'Method' with a terminology, where possible. For example: Physical examination, Chest x-ray, Histopathology result, Colonoscopy."
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Method (3)",
-            "description" : "Type of examination or investigation used to identify the evidence.",
-            "comment" : "Consider coding 'Method' with a terminology, where possible. For example: Physical examination, Chest x-ray, Histopathology result, Colonoscopy."
           }
         },
         "nb" : {
@@ -30668,12 +30654,6 @@
             "text" : "Morfologisk diagnose",
             "description" : "Angi primærtumorens morfologisk diagnose av ved å velge en verdi fra nedtrekkslisten.",
             "comment" : "Verdisett (kunnskapsbase) for morfologiske diagnoser relatert til ben- og bløtvevssvulster er utarbeidet i samarbeid med klinikere. Diagnoser er kodet med NORPAT og ICD-O, samt kategorisert som malign, benign eller usikker malign/benign."
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.3",
-            "text" : "PET-CT",
-            "description" : "Angi utredningsmetode ved å velge en verdi fra nedtrekkslisten."
           }
         },
         "de" : {
@@ -30689,13 +30669,6 @@
             "code" : "at0024",
             "text" : "*Additional details (en)",
             "description" : "*Additional structured details about findings. (en)"
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Methode (3)",
-            "description" : "Art der Untersuchung oder Recherche, die zur Feststellung der Evidenz verwendet wird.",
-            "comment" : "Erwägen Sie 'Methode' mit einer Terminologie zu kodieren, wenn möglich. Zum Beispiel: Körperliche Untersuchung, Röntgenaufnahme der Brust, Ergebnis der Histopathologie, Koloskopie."
           }
         },
         "sv" : {
@@ -30703,13 +30676,6 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022",
             "text" : "Metod (2)",
-            "description" : "Typ av undersökning eller utredning som används för att identifiera bevisen.",
-            "comment" : "Överväg att koda 'Metod' med en terminologi, där det är möjligt. Till exempel: Fysisk undersökning, bröströntgen, resultat av histopatologi, koloskopi."
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Metod (3)",
             "description" : "Typ av undersökning eller utredning som används för att identifiera bevisen.",
             "comment" : "Överväg att koda 'Metod' med en terminologi, där det är möjligt. Till exempel: Fysisk undersökning, bröströntgen, resultat av histopatologi, koloskopi."
           }
