@@ -48,7 +48,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "Endringer (bryter med skript sammendrag):\n- Endret elementnavn for biopsityper til \"Type biopsi\"\n- Byttet ut cluster anatomisk lokalisasjon til nyere versjon, samt legge til \"Angis kun for parorgan\" i element for kroppsside\n- Modellert inn mulighet for å huke av PET-CT ved primærdiagnose med CLUSTER.clinical_evidence.v1\n\nQA-møte:\n- Fjernet \"Tilstede\"/\"Utført\"-elementer\n- Byttet datoer ang diagnose (slik at det samstemmer med eksportskjema)\n- Benytter \"Forekomst\" i CLUSTER.problem_qualifier.v2 for å sette type ny tumorhendelse",
+        "purpose" : "Endringer (bryter med skript sammendrag):\n- Endret elementnavn for biopsityper til \"Type biopsi\"\n- Byttet ut cluster anatomisk lokalisasjon til nyere versjon, samt legge til \"Angis kun for parorgan\" i element for kroppsside\n- Modellert inn mulighet for å huke av PET-CT ved primærdiagnose med CLUSTER.clinical_evidence.v1\n\nQA-møte:\n- Fjernet \"Tilstede\"/\"Utført\"-elementer\n- Byttet datoer ang diagnose (slik at det samstemmer med eksportskjema)\n- Benytter \"Variant\" i EVALUATION.problem_diagnosis (sammen med \"Residiv\" og \"Progresjon\" i CLUSTER.problem_qualifier) for å angi type tumorhendelse.",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
