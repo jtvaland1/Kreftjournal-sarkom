@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "cace785a76b30638e6769d7de630c53c",
+      "MD5-CAM-1.0.1" : "84c50c494302c2f4308c664f48638d5a",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -64123,6 +64123,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -64140,7 +64141,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.5" ],
+                  "constraint" : [ "ac0.6" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -64244,10 +64245,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64264,10 +64265,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64284,10 +64285,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64329,10 +64330,10 @@
             "text" : "Side (angis kun for parorgan)",
             "description" : "Den identifiserte kroppssiden."
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64349,10 +64350,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64369,10 +64370,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64389,10 +64390,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64409,10 +64410,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64429,10 +64430,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64449,10 +64450,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -64469,10 +64470,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
             "description" : ""
           }
         }
@@ -64507,6 +64508,11 @@
         "ac0.5" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.5",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
           "members" : [ "at0003", "at0004" ]
         }
       }
@@ -66490,6 +66496,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -66507,7 +66514,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.5" ],
+                  "constraint" : [ "ac0.6" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -66611,10 +66618,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66631,10 +66638,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66651,10 +66658,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66696,10 +66703,10 @@
             "text" : "Side (angis kun for parorgan)",
             "description" : "Den identifiserte kroppssiden."
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66716,10 +66723,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66736,10 +66743,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66756,10 +66763,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66776,10 +66783,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66796,10 +66803,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66816,10 +66823,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -66836,10 +66843,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
             "description" : ""
           }
         }
@@ -66874,6 +66881,11 @@
         "ac0.5" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.5",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
           "members" : [ "at0003", "at0004" ]
         }
       }
@@ -68936,6 +68948,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -68953,7 +68966,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.5" ],
+                  "constraint" : [ "ac0.6" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -69057,10 +69070,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69077,10 +69090,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69097,10 +69110,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69142,10 +69155,10 @@
             "text" : "Side (angis kun for parorgan)",
             "description" : "Den identifiserte kroppssiden."
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69162,10 +69175,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69182,10 +69195,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69202,10 +69215,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69222,10 +69235,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69242,10 +69255,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69262,10 +69275,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
             "description" : ""
           }
         },
@@ -69282,10 +69295,10 @@
             "code" : "ac0.3",
             "description" : ""
           },
-          "ac0.5" : {
+          "ac0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
             "description" : ""
           }
         }
@@ -69320,6 +69333,11 @@
         "ac0.5" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.5",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
           "members" : [ "at0003", "at0004" ]
         }
       }
