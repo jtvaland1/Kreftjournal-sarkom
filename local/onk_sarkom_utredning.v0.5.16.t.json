@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "0498e8e017db8f0fea8574beace6eb8b",
+      "MD5-CAM-1.0.1" : "48af5bdcec1403cbf71f6d22b83553ac",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -38077,7 +38077,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0023.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -38116,6 +38115,12 @@
             "code" : "at0003",
             "text" : "Grunnlag",
             "description" : ""
+          },
+          "at0023.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023.1",
+            "text" : "Merknad",
+            "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
           }
         },
         "de" : {
