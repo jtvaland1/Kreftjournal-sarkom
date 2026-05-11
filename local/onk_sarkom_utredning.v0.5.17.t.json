@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "872af643652974b309e5b4c71059014b",
+      "MD5-CAM-1.0.1" : "05ecdf44b205228a0f801493bfcd69ae",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -27161,7 +27161,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0002.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -27194,6 +27193,12 @@
             "text" : "Multifokal tumor",
             "description" : "Angir at det forekommer flere primærtumorer med samme morfologi. ",
             "comment" : "Angir at det forekommer flere primærtumorer med samme morfologi. "
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Merknad",
+            "description" : "Beskrivelse av flere primære maligniteter."
           }
         }
       },
@@ -27335,7 +27340,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T1",
-                    "value" : "cT1"
+                    "value" : "cT1",
+                    "translations" : {
+                      "nb" : "cT1c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T1a",
@@ -27367,7 +27375,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T1",
-                    "value" : "cT1c"
+                    "value" : "cT1",
+                    "translations" : {
+                      "nb" : "cT1c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T11",
@@ -27391,7 +27402,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T2",
-                    "value" : "cT2"
+                    "value" : "cT2",
+                    "translations" : {
+                      "nb" : "cT2c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T2a",
@@ -27411,7 +27425,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T2",
-                    "value" : "cT2c"
+                    "value" : "cT2",
+                    "translations" : {
+                      "nb" : "cT2c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T2d",
@@ -27419,7 +27436,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T3",
-                    "value" : "cT3"
+                    "value" : "cT3",
+                    "translations" : {
+                      "nb" : "cT3c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T3a",
@@ -27431,7 +27451,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T3",
-                    "value" : "cT3c"
+                    "value" : "cT3",
+                    "translations" : {
+                      "nb" : "cT3c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T3d",
@@ -27443,7 +27466,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T4",
-                    "value" : "cT4"
+                    "value" : "cT4",
+                    "translations" : {
+                      "nb" : "cT4c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T4a",
@@ -27455,7 +27481,10 @@
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T4",
-                    "value" : "cT4c"
+                    "value" : "cT4",
+                    "translations" : {
+                      "nb" : "cT4c"
+                    }
                   }, {
                     "terminologyId" : "no.onk.tnm",
                     "code" : "T4d",
@@ -38405,6 +38434,10 @@
                     "value" : "Innvekst i ben"
                   }, {
                     "terminologyId" : "SNOMED-CT",
+                    "code" : "74964007",
+                    "value" : "Annet"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "261665006",
                     "value" : "Ukjent"
                   } ]
@@ -38445,7 +38478,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0023.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -38484,6 +38516,12 @@
             "code" : "at0003",
             "text" : "Grunnlag",
             "description" : ""
+          },
+          "at0023.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023.1",
+            "text" : "Nærmere beskrivelse av lokale forhold",
+            "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
           }
         },
         "de" : {
