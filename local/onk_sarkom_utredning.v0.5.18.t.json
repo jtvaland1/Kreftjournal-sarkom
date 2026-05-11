@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "20a2c083a4990b38e989ebbd929d7c41",
+      "MD5-CAM-1.0.1" : "c8a1781b61d700e28059883f69bcf060",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -7871,7 +7871,68 @@
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
                           "nodeId" : "at0004.1",
-                          "attributes" : [ ],
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "ORPHA"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "ORPHA" ],
+                                  "limitToList" : false,
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "636",
+                                    "value" : "Neurofibromatose"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "357027",
+                                    "value" : "Retinoblastom"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "321",
+                                    "value" : "Multiple osteokondromer (MO)"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "296",
+                                    "value" : "Olliers sykdom"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "139411",
+                                    "value" : "Carneys triade"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "524",
+                                    "value" : "Li-Fraumenis syndrom/TP53"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "163634",
+                                    "value" : "Maffuccis syndrom"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "2801",
+                                    "value" : "Pagets sykdom"
+                                  }, {
+                                    "terminologyId" : "ORPHA",
+                                    "code" : "201",
+                                    "value" : "Cowdens syndrom"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ ]
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
