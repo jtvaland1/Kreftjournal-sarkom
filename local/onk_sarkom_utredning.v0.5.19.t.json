@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "d56ccda579230b3c4679b5dffdb5991a",
+      "MD5-CAM-1.0.1" : "87cbbf16641274ee255ac40ae4418f47",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -1434,7 +1434,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004",
             "text" : "Klinisk kontaktårsak",
-            "description" : "Marker «Symptomer» hvis det var symptomer som kan direkte knyttes til den aktuelle diagnosen som har ført til undersøkelse og diagnostikk, uansett om man hadde mistanke om sarkom/mesenkymal tumor eller ikke når undersøkelsen ble igangsatt.\nMarker «Tilfeldig funn» hvis utredningen som førte til den aktuelle diagnosen ble igangsatt pga symptomer/klinikken knyttet til en annen helsetilstand. Eksempler – undersøkelser som ble gjort i forbindelsen med traume; liten GIST svulst påvist ved kirurgi for adenocarcinom.",
+            "description" : "Marker «Symptomer» hvis symptomer som kan direkte knyttes til den aktuelle diagnosen var årsaken  til undersøkelse og diagnostikk, uansett om man hadde mistanke om sarkom/mesenkymal tumor eller ikke når undersøkelsen ble igangsatt.\nMarker «Tilfeldig funn» hvis utredningen som førte til den aktuelle diagnosen ble igangsatt pga symptomer/klinikken knyttet til en annen helsetilstand. Eksempler – undersøkelser som ble gjort i forbindelsen med traume; liten GIST svulst påvist ved kirurgi for adenocarcinom.",
             "comment" : "Det er brukt lokalt kodeverk da det ikke finnes gode SNOMED-CT koder for dette."
           }
         }
@@ -4223,7 +4223,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0028.1",
             "text" : "Er det utført noen invasiv prosedyre på primærtumor før det forelå mistanke om sarkom?",
-            "description" : "Marker «Ja» hvis invasiv prosedyre (diagnostisk biopsi eller operasjon) ble gjennomført før pasienten ble vurdert på sarkomsenter og sarkom var mistenkt, uansett hvor denne prosedyren ble utført.\nMarker «Nei, tumor er «urørt»» hvis pasienten ble henvist til vurdering på sarkomsenter,  sarkom ble mistenkt og prosedyren ble gjennomført etter prinsipper for utredning og behandling av sarkom, uansett hvor prosedyren ble utført.",
+            "description" : "Marker «Ja» hvis invasiv prosedyre (diagnostisk biopsi eller operasjon) ble gjennomført før pasienten ble vurdert på sarkomsenter og sarkom var mistenkt, uansett hvor denne prosedyren ble utført.\nMarker «Ja» hvis invasiv prosedyre (nålebiopsi eller kirurgisk inngrep) ble gjennomført før pasienten ble vurdert på sarkomsenter og sarkom var mistenkt, uansett hvor denne prosedyren ble utført.\nMarker «Nei, tumor er «urørt»» hvis pasienten ble henvist til vurdering på sarkomsenter,  sarkom ble mistenkt og prosedyren ble gjennomført etter prinsipper for utredning og behandling av sarkom, uansett hvor prosedyren ble utført.",
             "comment" : "Verdisett kodet med SNOMED-CT, da \"Nei, tumor er urørt\" ikke finnes i internt verdisett."
           },
           "at0000.1" : {
@@ -7846,7 +7846,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.22" ],
+                              "constraint" : [ "ac0.110" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -8026,16 +8026,16 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.22" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.22",
-            "description" : ""
-          },
           "ac0.109" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.109",
+            "description" : ""
+          },
+          "ac0.110" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.110",
             "description" : ""
           }
         },
@@ -8044,7 +8044,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0028.1",
             "text" : "Er det påvist tilstand hos pasient som disponerer for sarkom?",
-            "description" : "Marker «Ja» hvis pasienten har en arvelig eller ervervet tilstand som er kjent for å predisponere for sarkom og velg den aktuelle tilstanden fra listen."
+            "description" : "Marker «Ja» hvis pasienten har en arvelig eller ervervet generell tilstand eller syndrom som er kjent for å predisponere for sarkom og velg den aktuelle tilstanden fra listen. Utvikling av sarkom i enkeltstående preeksisterende lesjon uten at det foreligger en generell tilstand/syndrom omfattes ikke av denne listen. "
           },
           "at0043.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -8093,72 +8093,72 @@
             "text" : "Spesifikt problem eller diagnose",
             "description" : ""
           },
-          "ac0.22" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.22",
-            "description" : ""
-          },
           "ac0.109" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.109",
+            "description" : ""
+          },
+          "ac0.110" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.110",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.22" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.22",
-            "description" : ""
-          },
           "ac0.109" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.109",
+            "description" : ""
+          },
+          "ac0.110" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.110",
             "description" : ""
           }
         },
         "nl" : {
-          "ac0.22" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.22",
-            "description" : ""
-          },
           "ac0.109" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.109",
+            "description" : ""
+          },
+          "ac0.110" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.110",
             "description" : ""
           }
         },
         "ca" : {
-          "ac0.22" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.22",
-            "description" : ""
-          },
           "ac0.109" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.109",
+            "description" : ""
+          },
+          "ac0.110" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.110",
             "description" : ""
           }
         },
         "fr" : {
-          "ac0.22" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.22",
-            "description" : ""
-          },
           "ac0.109" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.109",
+            "description" : ""
+          },
+          "ac0.110" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.110",
             "description" : ""
           }
         }
@@ -8695,6 +8695,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.109",
           "members" : [ "at0023" ]
+        },
+        "ac0.110" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.110",
+          "members" : [ "at0031", "at0032", "at0033" ]
         }
       }
     },
@@ -30587,7 +30592,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0006.1",
             "text" : "Dato diagnosebekreftelse (diagnostisk prøvesvar foreligger)",
-            "description" : "Dette feltet brukes kun hvis det foreligger vevsprøve. Dato når diagnostisk biopsi besvares av patolog settes som Dato diagnosebekreftelse. Hvis histologi revideres og diagnosen endres (gjelder ikke mindre korrigeringer og presiseringer av diagnose) skal dato for siste revisjon settes som Dato diagnosebekreftelse. "
+            "description" : "Dette feltet brukes kun hvis det foreligger vevsprøve. Dato når diagnostisk biopsi besvares av patolog settes som ”Dato biopsisvar foreligger”. Hvis histologi revideres og diagnosen endres (gjelder ikke mindre korrigeringer og presiseringer av diagnose) skal dato for siste revisjon settes som Dato biopsisvar foreligger”."
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -34437,7 +34442,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
             "text" : "Diagnosedato (diagnostisk undersøkelse utført)",
-            "description" : "Anslått eller faktisk dato/tid da diagnosen ble bekreftet: prøvetakningsdato for første positiv histologi/cytologi (evt. mottaksdato så svardato for patologiprøve). Dersom det ikke er tatt vevsprøver, benyttes den dato man ved hjelp av andre undersøkelser (bildediagnostikk, blodprøve etc.) bestemmer seg for at pasienten har kreft.​"
+            "description" : "Diagnosedato er dato for første diagnostisk biopsi hvis biopsi er tatt. Hvis diagnosen stilles på bakgrunn av radiologisk undersøkelse og biopsi ansees som ikke nødvendig settes dato for første diagnostisk radiologisk undersøkelse som diagnosedato. Hvis diagnosen settes første gang på operasjonspreparatet (tilfeldig funn eller overraskende funn uten preoperativ mistanke om sarkom eller annen mesenkymal tumor ) settes operasjonsdato som diagnosedato."
           },
           "at0069.1" : {
             "@type" : "ARCHETYPE_TERM",
