@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b632de9ed02ad1dedaf8a6bc6745ccc8",
+      "MD5-CAM-1.0.1" : "4e151e58788dcad82f41859d07b86257",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -1881,7 +1881,7 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "ICD-kode",
+            "text" : "Diagnose",
             "description" : "Angi tidligere kreftdiagnose ved å søke i ICD-10."
           },
           "at0040.1" : {
