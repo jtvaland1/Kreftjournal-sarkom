@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f148b90a5ffd758558b2400af0fb38c4",
+      "MD5-CAM-1.0.1" : "6577209b67a9d5bdf08075bf7a8092d7",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -38100,19 +38100,19 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "568051000202102",
-                    "value" : "Intraossøs tumor"
+                    "code" : "373066001",
+                    "value" : "Ja"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "568031000202106",
-                    "value" : "Penetrasjon av cortex/periost"
+                    "code" : "373067005",
+                    "value" : "Nei"
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "261665006",
                     "value" : "Ukjent"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "397376003",
+                    "code" : "1156316003",
                     "value" : "Ikke mulig å klassifisere"
                   } ]
                 } ]
