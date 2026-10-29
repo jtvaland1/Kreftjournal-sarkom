@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e8bc9d52720b3e10ed9b5a4102b49722",
+      "MD5-CAM-1.0.1" : "83ed540dafdfd8b5370d3a6dfdf696cb",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -48,7 +48,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "- ECOG v1 -> v2\n",
+        "purpose" : "- Terminology \"Patologisk fraktur?\": SNMED-CT -> SNOMED-CT\n- Terminology: \"Kreftdiagnose\": ICD-1 -> ICD-10",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
@@ -1733,48 +1733,48 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "ICD-1"
+                                    "value" : "ICD-10"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "ICD-1" ],
+                                  "selectedTerminologies" : [ "ICD-10" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.0",
                                     "value" : "Kreft i gastrointestinaltraktus"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.1",
                                     "value" : "Kreft i trachea, bronkier eller lunger"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.2",
                                     "value" : "Kreft i andre luftveis- og thoraxorganer"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.3",
                                     "value" : "Brystkreft"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.4",
                                     "value" : "Kreft i kjønnsorganer"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.5",
                                     "value" : "Kreft i urinveier"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.6",
                                     "value" : "Leukemi"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.7",
                                     "value" : "Andre ondartede svulster i lymfatisk/hematopoetisk vev"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.8",
                                     "value" : "Kreft i andre spesifiserte organer"
                                   }, {
-                                    "terminologyId" : "ICD-1",
+                                    "terminologyId" : "ICD-10",
                                     "code" : "Z85.9",
                                     "value" : "Kreft, uspesifisert lokalisasjon"
                                   } ]
@@ -35813,24 +35813,24 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNMED-CT"
+                                    "value" : "SNOMED-CT"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNMED-CT" ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNMED-CT",
+                                    "terminologyId" : "SNOMED-CT",
                                     "code" : "373066001",
                                     "value" : "Ja"
                                   }, {
-                                    "terminologyId" : "SNMED-CT",
+                                    "terminologyId" : "SNOMED-CT",
                                     "code" : "373067005",
                                     "value" : "Nei"
                                   }, {
-                                    "terminologyId" : "SNMED-CT",
+                                    "terminologyId" : "SNOMED-CT",
                                     "code" : "261665006",
                                     "value" : "Ukjent"
                                   }, {
-                                    "terminologyId" : "SNMED-CT",
+                                    "terminologyId" : "SNOMED-CT",
                                     "code" : "1156316003",
                                     "value" : "Ikke mulig å klassifisere"
                                   } ]
