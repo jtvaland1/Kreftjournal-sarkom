@@ -48,7 +48,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "- Terminology \"Patologisk fraktur?\": SNMED-CT -> SNOMED-CT\n- Terminology: \"Kreftdiagnose\": ICD-1 -> ICD-10",
+        "purpose" : "- verdisett \"Hovedårsak til utredning\" oppdatert til: \n2\tSymptomer\n3\tTilfeldig funn ved utredning for en annen tilstand\n4\tBifunn/tilfeldig funn ved operasjon\n",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
