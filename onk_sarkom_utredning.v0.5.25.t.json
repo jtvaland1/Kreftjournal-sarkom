@@ -48,7 +48,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "- verdisett \"Hovedårsak til utredning\" oppdatert til: \n2\tSymptomer\n3\tTilfeldig funn ved utredning for en annen tilstand\n4\tBifunn/tilfeldig funn ved operasjon\n",
+        "purpose" : "- verdisett \"Hovedårsak til utredning\" oppdatert til: \n    2 Symptomer\n    3 Tilfeldig funn ved utredning for en annen tilstand\n    4 Bifunn/tilfeldig funn ved operasjon\n- \"Radiologi\" -> \"Bildediagnostikk\" i verdisett for samtlige dataelementer",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
