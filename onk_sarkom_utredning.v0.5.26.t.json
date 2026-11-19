@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "109.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e8e236bd831e3590c8b5d382966f1257",
+      "MD5-CAM-1.0.1" : "41fcdfa83c54df521763bd89f131d2b7",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -48,7 +48,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "- Endret SNOMED-CT kode for \"Infiltrasjon utover utgangsorgan\": fra {373379001-Tumor invasion finding (finding)} til {372288004 - Local tumor invasion (finding)}.\n\nUtredningsmetoder:\n- PET-CT fjernet fra Diagnostisk metode\n- Cluster Klinisk grunnlag (PET-CT) fjernet \n\tDette er fordi vi innfører nytt dataelement som tillater registrering av typer bildediagnostikk / endoskopi som er gjennomført for primærtumor.\n- Lagt til OBSERVATION kartleggings diagnostiske prosedyrer i problem/diagnose-overordnet problem for registrering av utførte bildediagnostiske us\n\n",
+        "purpose" : "- Endret SNOMED-CT kode for \"Infiltrasjon utover utgangsorgan\": fra {373379001-Tumor invasion finding (finding)} til {372288004 - Local tumor invasion (finding)}.\n\nUtredningsmetoder:\n- PET-CT fjernet fra Diagnostisk metode\n- Cluster Klinisk grunnlag (PET-CT) fjernet \n\tDette er fordi vi innfører nytt oppsett som tillater registrering av typer bildediagnostikk / endoskopi som er gjennomført for primærtumor.\n- Lagt til oppsett for bildediagnostiske undersøkelser primærtumor med OBSERVATION.investigation_screening.v1 under Problem/diagnose_overordnet problem \n",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
